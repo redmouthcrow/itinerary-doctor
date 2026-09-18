@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "schema_version": 1,
+    "updated_at": "2026-09-11",
+    "scope": "Xinjiang north-loop corridor (seed set). Other corridors (Tibet / west Sichuan / Qinghai-Gansu / Inner Mongolia) are W2 work.",
+    "freshness_policy": "Every record carries verified_at. records older than stale_after_days are surfaced as 待核实, never silently trusted.",
+    "stale_after_days": 60,
+    "source_priority": ["government/authority announcement", "official scenic-area account (WeChat)", "12328 / transport bureau", "reputable guide (lead only)"],
+    "disclaimer": "Seasonal windows and reservation rules change. Always confirm via the official channel listed in `source` before delivery."
+  },
+  "categories": {
+    "reservation": "requires advance booking (channel + lead time)",
+    "quota": "hard daily cap (vehicles or people)",
+    "limited_access": "access restricted to a specific route/vehicle/parking",
+    "closure": "seasonal closure or time-window restriction",
+    "vehicle": "vehicle type / private-car restrictions",
+    "document": "permit or ID requirement",
+    "price": "ticket / pass price band",
+    "parking": "parking rules and fees",
+    "holiday": "public holiday dates affecting crowds and prices",
+    "season": "best/worst viewing window"
+  },
+  "constraints": [
+    {
+      "id": "duku-window",
+      "place": "独库公路",
+      "category": "closure",
+      "level": "hard",
+      "text": "2026 年独库公路（G217）实行昼通夜施：常规通行时段 8:00—19:00（库如力→那拉提段可延至 21:00），夜间全线封闭施工，19:00 后所有入口关闭。",
+      "source": "新疆交通运输 / 新疆交警 公告",
+      "verified_at": "2026-09-11",
+      "impact": "任何把独库排在傍晚或夜间的行程都必须改；早出发选 6:30 是无效的，8 点才放行。"
+    },
+    {
+      "id": "duku-reservation-north",
+      "place": "独库公路",
+      "category": "reservation",
+      "level": "hard",
+      "text": "独库北段（独山子—那拉提）强制预约，每日 0 点放第 7 天名额，一车一天仅 1 次预约。中段、南段免预约。",
+      "source": "平安独库 / 新疆交警 / 游新疆一码游",
+      "verified_at": "2026-09-11",
+      "impact": "把独库当返程主线的行程等于押注抢票成功。"
+    },
+    {
+      "id": "duku-season-close",
+      "place": "独库公路",
+      "category": "closure",
+      "level": "hard",
+      "text": "预计 2026 年 10 月中旬（大概率 10/10 前后）实施冬季封闭；因独库高速施工与公路安全改造管控，存在提前封闭可能。2026 年 6 月 1 日恢复全线通车。",
+      "source": "新疆交通部门年度通告 + 媒体转述",
+      "verified_at": "2026-09-11",
+      "impact": "10 月上旬穿越独库属于高风险安排，必须有公路绕行预案（巴音布鲁克—和静—焉耆—托克逊—乌鲁木齐，约 10—12 h）。"
+    },
+    {
+      "id": "baihaba-vehicle-quota",
+      "place": "白哈巴",
+      "category": "quota",
+      "level": "hard",
+      "text": "旺季（5/1—10/15）自驾车辆限量免费预约：每日 200 台（190 台轴距 9 m 以下 + 10 台 9 座以下房车），停车位满载即满额，需改乘白哈巴 1 路车入园。",
+      "source": "喀纳斯景区管理委员会公告",
+      "verified_at": "2026-09-11"
+    },
+    {
+      "id": "baihaba-vehicle-channel",
+      "place": "白哈巴",
+      "category": "reservation",
+      "level": "hard",
+      "text": "车辆预约走「原行网」微信公众号分时预约栏，须至少提前一日在线申请，每次仅可预约 1 台车，并需同步预约白哈巴景区门票。逾期未入园且未取消车辆订单，将无法进行下次预约。",
+      "source": "喀纳斯景区管理委员会公告（原行网公众号）",
+      "verified_at": "2026-09-11",
+      "impact": "行程变动务必取消车辆订单，否则会被拉黑，影响后续预约。"
+    },
+    {
+      "id": "baihaba-route-limit",
+      "place": "白哈巴",
+      "category": "limited_access",
+      "level": "hard",
+      "text": "自驾进入白哈巴只允许从哈巴河县铁热克提游客服务中心方向进入；自驾车辆统一停放白哈巴新村停车场，不得自驾进入喀纳斯核心区。铁热克提方向自驾入园时间 8:00—22:00，贾登峪方向 8:00—18:00。",
+      "source": "喀纳斯景区 / 白哈巴景区公告",
+      "verified_at": "2026-09-11"
+    },
+    {
+      "id": "baihaba-visitor-cap",
+      "place": "白哈巴",
+      "category": "quota",
+      "level": "hard",
+      "text": "白哈巴游客每日限流 3500 人；旺季开放 08:00—20:00（20:00 停止入园），淡季（10/16 起）10:00—18:00。",
+      "source": "喀纳斯景区承载量公告",
+      "verified_at": "2026-09-11"
+    },
+    {
+      "id": "baihaba-document",
+      "place": "白哈巴",
+      "category": "document",
+      "level": "hard",
+      "text": "白哈巴属边境管理区，必须办边境管理区通行证（边防证），无证无法入园。可在「移民局 12367」小程序线上免费申领（目的地填“阿勒泰哈巴河县白哈巴”），或现场办理：哈巴河县游客服务中心 / 白桦林景区游客服务中心 / 铁热克提乡贸易特便民服务站 / 喀纳斯换乘中心警务站（10:00—13:30、15:30—19:00）。",
+      "source": "移民局 12367 / 喀纳斯景区",
+      "verified_at": "2026-09-11",
+      "impact": "线上办证免费且快，务必出发前办好；沿途检查站会抽查。"
+    },
+    {
+      "id": "baihaba-ticket",
+      "place": "白哈巴",
+      "category": "price",
+      "level": "soft",
+      "text": "白哈巴门票 30 元（旺季 5/1—10/15）+ 区间车 45 元（喀纳斯往返，车程约 1 h）。",
+      "source": "喀纳斯景区",
+      "verified_at": "2026-09-11"
+    },
+    {
+      "id": "kanas-vehicle-ban",
+      "place": "喀纳斯",
+      "category": "vehicle",
+      "level": "hard",
+      "text": "旺季（5/1—10/15）私家车禁止驶入喀纳斯核心景区，统一停放贾登峪各停车场后换乘区间车。9/15 起试点开放每日 200 个自驾名额（经「原行网」小程序，需提前 3 天实名登记，限 7 座及以下、车龄满 3 年、驾龄满 3 年）。",
+      "source": "喀纳斯景区管理委员会",
+      "verified_at": "2026-09-11",
+      "impact": "不要把行程建立在自驾名额上——它是彩票，不是计划。"
+    },
+    {
+      "id": "kanas-ticket",
+      "place": "喀纳斯",
+      "category": "price",
+      "level": "soft",
+      "text": "旺季票价（至 10/15）：一进套票 230 元（住景区内）、二进套票 270 元（住贾登峪需二进）、全域通票 375 元/3 天。冬季全域票（10/16 起）100 元/3 天。",
+      "source": "喀纳斯景区",
+      "verified_at": "2026-09-11",
+      "impact": "住景区内一晚买一进即可；两天进两次必须买二进，差价 40 元/人。"
+    },
+    {
+      "id": "kanas-guanyutai",
+      "place": "喀纳斯",
+      "category": "quota",
+      "level": "hard",
+      "text": "观鱼台专线车 20 元，每日限 8000 人，需单独预约（与门票预约分开）。",
+      "source": "喀纳斯景区",
+      "verified_at": "2026-09-11",
+      "impact": "这是最容易被漏掉的一项预约。"
+    },
+    {
+      "id": "kanas-reservation",
+      "place": "喀纳斯",
+      "category": "reservation",
+      "level": "hard",
+      "text": "喀纳斯、禾木、白哈巴实行实名制预约购票与分时入园；「喀纳斯景区」公众号 / 原行网 / 智游阿勒泰可约，现场窗口余票极少。节假日建议提前 5—15 天。",
+      "source": "喀纳斯景区",
+      "verified_at": "2026-09-11"
+    },
+    {
+      "id": "hemu-vehicle-ban",
+      "place": "禾木",
+      "category": "vehicle",
+      "level": "hard",
+      "text": "禾木同样禁止私家车进村，车辆停禾木门票站/游客中心后换乘区间车。禾木门票 50 元 + 区间车。",
+      "source": "喀纳斯景区",
+      "verified_at": "2026-09-11"
+    },
+    {
+      "id": "jiadengyu-parking",
+      "place": "贾登峪",
+      "category": "parking",
+      "level": "soft",
+      "text": "贾登峪为喀纳斯景区主换乘点，小/中型车 5 元/小时、24 小时内上限 20 元，全天收费；民俗风情园停车场可过夜（约 20 元/车/天，有卫生间、超市、安保）。导航请搜「喀纳斯贾登峪门票站停车场」。",
+      "source": "阿地发改价费(2021)16 号 + 景区指南",
+      "verified_at": "2026-09-11",
+      "impact": "这是「车停贾登峪、住白哈巴/景区内」方案的成本基础，约 20 元/24h。"
+    },
+    {
+      "id": "sailimu-vehicle-reservation",
+      "place": "赛里木湖",
+      "category": "reservation",
+      "level": "hard",
+      "text": "自驾入园需在「赛里木湖」公众号预约，每日限量，旺季建议提前 3—7 天。",
+      "source": "赛里木湖景区",
+      "verified_at": "2026-09-11"
+    },
+    {
+      "id": "sailimu-price",
+      "place": "赛里木湖",
+      "category": "price",
+      "level": "soft",
+      "text": "旺季（至 10/15）门票 70 元 + 区间车 75 元；自驾套票旺季 145 元/人、淡季 110 元/人；10/16 起门票半价。",
+      "source": "赛里木湖景区",
+      "verified_at": "2026-09-11"
+    },
+    {
+      "id": "sailimu-nofuel",
+      "place": "赛里木湖",
+      "category": "parking",
+      "level": "hard",
+      "text": "景区内无加油站、无充电桩，环湖约 96 km，进湖前必须加满油。",
+      "source": "赛里木湖景区指南",
+      "verified_at": "2026-09-11"
+    },
+    {
+      "id": "sailimu-season",
+      "place": "赛里木湖",
+      "category": "season",
+      "level": "soft",
+      "text": "9—10 月上旬为秋季错峰窗口：气温约 5—18℃，草原转暖黄、湖水深蓝、人少价低。10 月下旬后夜间常降至 0℃ 以下，环湖偏远路段可能因降雪临时管控。",
+      "source": "景区指南 + 气象常识",
+      "verified_at": "2026-09-11"
+    },
+    {
+      "id": "altay-autumn-window",
+      "place": "喀纳斯/禾木/白哈巴",
+      "category": "season",
+      "level": "soft",
+      "text": "阿勒泰地区气象台 2026 年秋叶观赏预报：最佳观赏期 9 月 15 日—10 月 5 日，较常年提前约一周；河谷区域（喀纳斯三湾、禾木河谷）9 月中下旬—10 月初为全盛期，10 月中旬后山区可能降雪。",
+      "source": "阿勒泰地区气象台 2026 秋叶预报",
+      "verified_at": "2026-09-11",
+      "impact": "安排喀纳斯/禾木时应落在 9/15—10/5 窗口内，越早越好。"
+    },
+    {
+      "id": "yili-steppe-season",
+      "place": "那拉提/喀拉峻",
+      "category": "season",
+      "level": "soft",
+      "text": "伊犁草原核心价值为 6—8 月绿色草甸；9 月底—10 月初空中草原转金黄/焦糖色，10 月后高海拔落叶。秋季另有“金镶绿”观感，但“看草原”的预期会落空。",
+      "source": "多方攻略与实地帖（非官方）",
+      "verified_at": "2026-09-11",
+      "impact": "若行程主题是“看草原”，10 月初去伊犁属于选错季节；用于摄影则可保留。"
+    },
+    {
+      "id": "holiday-2026-2h",
+      "place": "全国",
+      "category": "holiday",
+      "level": "hard",
+      "text": "2026 年中秋节：9 月 25 日（周五）—9 月 27 日（周日）放假 3 天，不调休。国庆节：10 月 1 日（周四）—10 月 7 日（周三）放假调休共 7 天；9 月 20 日（周日）、10 月 10 日（周六）上班。",
+      "source": "国务院办公厅 2026 年部分节假日安排",
+      "verified_at": "2026-09-11",
+      "impact": "9/25—9/27 是小高峰，9/28—9/30 是工作日（反而清净），10/1—10/7 是全年最高峰。把热门景区排在 9/28—9/30 能明显降人流。"
+    },
+    {
+      "id": "xinjiang-speed-limits",
+      "place": "全国",
+      "category": "parking",
+      "level": "soft",
+      "text": "新疆区间测速密集；加油站需刷身份证登记；部分路段服务区间隔大（S21 沙漠高速尤甚）。",
+      "source": "自驾经验 + 交警提示",
+      "verified_at": "2026-09-11"
+    }
+  ]
+}

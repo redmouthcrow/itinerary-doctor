@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "note": "Gazetteer of place coordinates used for routing and map markers.",
+    "crs": "WGS-84",
+    "source": "OpenStreetMap (Overpass API, name-matched nodes/ways)",
+    "verified_at": "2026-09-11",
+    "warning": "Coordinates marked \"confidence\": \"low\" were hand-estimated and MUST be checked against the base map before delivery. OSM coverage in western China is incomplete — a wrong point silently produces a wrong route and a wrong odometer."
+  },
+  "places": {
+    "乌鲁木齐": {"lat": 43.8256, "lon": 87.6168, "confidence": "high", "osm": "city"},
+    "乌鲁木齐机场": {"lat": 43.9071, "lon": 87.4744, "confidence": "high", "alias": ["地窝堡机场", "URC"]},
+    "五彩滩": {"lat": 47.8391, "lon": 86.6717, "confidence": "high", "osm": "node 五彩滩"},
+    "布尔津": {"lat": 47.7006, "lon": 86.8722, "confidence": "high", "osm": "布尔津县 city"},
+    "哈巴河县": {"lat": 48.0597, "lon": 86.4154, "confidence": "high", "osm": "哈巴河县 city"},
+    "铁热克提": {"lat": 48.5237, "lon": 86.7011, "confidence": "high", "osm": "铁热克提门票点", "alias": ["铁热克提门票站"]},
+    "白哈巴": {"lat": 48.6932, "lon": 86.7816, "confidence": "high", "osm": "白哈巴村 village"},
+    "喀纳斯": {"lat": 48.6999, "lon": 87.0353, "confidence": "high", "osm": "喀纳斯老村 village", "alias": ["喀纳斯村", "喀纳斯换乘中心"]},
+    "喀纳斯湖": {"lat": 48.7546, "lon": 87.0185, "confidence": "high", "osm": "喀纳斯湖游船"},
+    "贾登峪": {"lat": 48.4917, "lon": 87.1460, "confidence": "high", "osm": "贾登峪 hamlet", "alias": ["贾登峪门票站", "喀纳斯贾登峪门票站停车场"]},
+    "禾木": {"lat": 48.5692, "lon": 87.4304, "confidence": "high", "osm": "禾木村 village", "alias": ["禾木村"]},
+    "禾木入口": {"lat": 48.4494, "lon": 87.3303, "confidence": "medium", "osm": "禾木入口"},
+    "冲乎尔": {"lat": 48.1167, "lon": 87.1279, "confidence": "high", "osm": "冲乎尔镇 town"},
+    "北屯": {"lat": 47.3530, "lon": 87.8310, "confidence": "medium", "note": "not OSM-verified in this pass"},
+    "乌尔禾魔鬼城": {"lat": 46.1158, "lon": 85.7500, "confidence": "high", "osm": "世界魔鬼城景区", "alias": ["世界魔鬼城", "魔鬼城"]},
+    "克拉玛依": {"lat": 45.5798, "lon": 84.8892, "confidence": "high"},
+    "奎屯": {"lat": 44.4250, "lon": 84.9020, "confidence": "medium"},
+    "独山子": {"lat": 44.3280, "lon": 84.8850, "confidence": "medium"},
+    "独山子大峡谷": {"lat": 44.1574, "lon": 84.7557, "confidence": "high", "osm": "独山子大峡谷景区 attraction"},
+    "精河": {"lat": 44.6060, "lon": 82.8920, "confidence": "medium"},
+    "赛里木湖东门": {"lat": 44.6011, "lon": 81.3907, "confidence": "high", "osm": "东门游客中心", "alias": ["赛里木湖", "赛湖东门"]},
+    "赛里木湖南门": {"lat": 44.4933, "lon": 81.1605, "confidence": "high", "osm": "赛里木湖南门 attraction"},
+    "赛里木湖北门": {"lat": 44.7272, "lon": 81.1436, "confidence": "high", "osm": "北门售票处"},
+    "赛里木湖西海草原": {"lat": 44.5776, "lon": 80.9894, "confidence": "high", "osm": "西海草原 locality"},
+    "果子沟大桥": {"lat": 44.4707, "lon": 81.1402, "confidence": "high", "osm": "果子沟大桥"}
+  }
+}

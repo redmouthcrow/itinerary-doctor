@@ -26,6 +26,26 @@ metadata:
 在"机票和部分酒店已经订了"的约束下，算出**该退哪晚、该改期哪晚、该新订哪晚**，
 并产出一份可直接转发客户的单文件交互路线图。
 
+## 支持的输入形状（不要求格式统一）
+
+用户拿到的行程形状千奇百怪，`parse_itinerary.py` 会自动识别，并把命中的策略写进输出：
+
+| 输入 | 例子 | 策略 |
+|---|---|---|
+| 标准/英文/非标准表头表格 | `日期/路线/住宿`、`时间,安排`、`Date,Plan,Stay` | 表头映射 |
+| 无表头表格 | `9月25日,抵达乌鲁木齐,全季酒店` | 按列位置猜 |
+| 天序号+日期+内容 | `第1天,9月25日,抵达乌鲁木齐,全季酒店` | 按列位置猜 |
+| Excel 日期序列号 | 单元格是 `46290` | 自动还原为 2026-09-25 |
+| markdown 标题式 | `## Day 3 · 9月27日 🏔 布尔津 → 白哈巴` | 标题式 |
+| 散文 / 微信聊天记录 | "9月25号到了乌鲁木齐先住一晚，26号去布尔津……" | 散文式（按日期切片） |
+
+- 日期写法支持：`2026-09-25` / `2026年9月25日` / `9月25日` / `9/25` / `9.25` / `26号`（省略月份自动顺延）/ `第3天` / `Day 3` / `D3` / `第三天`。
+- **`第 N 天` 必须配 `--start 2026-09-25`** 才能换算成真实日期。
+- **截图 / 照片不能自动处理**：本 skill 不做 OCR，且很多 agent 环境的模型没有视觉能力。
+  让用户把图里的文字贴成文本（微信长按"提取文字"），或换有视觉能力的 agent 先转成文本。
+- 自动判断不对劲时用 `--strategy table|heading|prose` 强制指定。
+- 完整支持矩阵与限制见 `references/input-formats.md`；这层由 `tests/test_normalize.py` 锁住。
+
 ## 什么时候用
 
 - 用户丢来一份行程表（Excel / 表格 / 截图 / 一段文字）问"这样安排合理吗"
@@ -47,10 +67,12 @@ metadata:
 ```bash
 # 0) 环境（零依赖，Python 标准库即可）
 ls scripts/
+python tests/test_normalize.py        # 可选：确认输入解析层正常（10 项断言）
 
-# 1) 行程表 → Trip Schema 骨架（xlsx / csv / md / txt）
-python scripts/parse_itinerary.py <用户给的表> -o trip.json
-#    产出的 stops/legs 是**草稿**：脚本会把需要人工复核的地方列出来
+# 1) 行程表 → Trip Schema 骨架（xlsx / csv / md / txt / 聊天记录都行）
+python scripts/parse_itinerary.py 用户的行程.xlsx -o trip.json --start 2026-09-25
+#    自动识别输入形状；产出里的 _draft.input_strategy 记录命中哪一级
+#    stops/legs 是**草稿**：脚本会把需要人工复核的地方列出来
 
 # 2) 补真实路网几何与里程（不要用直线距离或"大约"）
 python scripts/fetch_routes.py trip.json
@@ -99,6 +121,7 @@ python scripts/render_poster.py trip.json -o 路线图.png     # 可选，需 Pi
 
 ## 参考文档
 
+- `references/input-formats.md` —— **支持的输入形状与限制**（含截图/PDF 的处理办法）
 - `references/checklist.md` —— 体检清单：时令 / 预约 / 证件 / 强度 / 停运 / 节假日六类检查项
 - `references/constraint-schema.md` —— 约束库字段定义（要新增地区时按它录数据）
 - `references/output-spec.md` —— 四件交付物的规格与验收标准

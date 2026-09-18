@@ -56,12 +56,32 @@ open /tmp/demo.html        # macOS；Windows 用 start，Linux 用 xdg-open
 处理自己的行程：
 
 ```bash
-python scripts/parse_itinerary.py 我的行程.xlsx -o trip.json   # 表 → 骨架
+python scripts/parse_itinerary.py 我的行程.xlsx -o trip.json --start 2026-09-25  # 表 → 骨架
 python scripts/fetch_routes.py     trip.json                   # 真实路网里程
 python scripts/fetch_constraints.py trip.json                  # 挂约束与告警
 python scripts/render_html.py      trip.json -o 路线图.html
 python scripts/render_report.py    trip.json -o 行程报告.md
 python scripts/render_poster.py    trip.json -o 路线图.png     # 可选，需 Pillow
+```
+
+## 不要求格式统一的输入
+
+用户拿到的行程什么样都有，`parse_itinerary.py` 会自动识别并记录命中哪一级策略：
+
+| 输入 | 例子 | 策略 |
+|---|---|---|
+| 标准/英文/非标准表头 | `日期/路线/住宿`、`时间,安排`、`Date,Plan,Stay` | 表头映射 |
+| 无表头表格 | `9月25日,抵达乌鲁木齐,全季酒店` | 按列位置猜 |
+| 天序号+日期+内容 | `第1天,9月25日,抵达乌鲁木齐,全季酒店` | 按列位置猜 |
+| Excel 日期序列号 | 单元格是 `46290` | 还原为 2026-09-25 |
+| markdown 标题式 | `## Day 3 · 9月27日 🏔 布尔津 → 白哈巴` | 标题式 |
+| 散文 / 微信聊天记录 | "9月25号到了乌鲁木齐先住一晚，26号去布尔津……" | 散文式（按日期切片） |
+
+日期写法支持 `2026-09-25` / `9月25日` / `9/25` / `9.25` / `26号`（省略月份自动顺延）/ `第3天` / `Day 3` / `D3`。
+**截图与 PDF 不能自动处理**（不做 OCR），详见 [references/input-formats.md](skills/itinerary-doctor/references/input-formats.md)。
+
+```bash
+python tests/test_normalize.py     # 6 种真实脏输入 + 10 项断言，锁住这一层
 ```
 
 ---
@@ -84,13 +104,15 @@ python scripts/render_poster.py    trip.json -o 路线图.png     # 可选，需
 skills/itinerary-doctor/
 ├── SKILL.md                 # 给 agent 的说明书（触发条件 + 工作流 + 质量红线）
 ├── scripts/
-│   ├── parse_itinerary.py   # xlsx/csv/md → Trip Schema（零依赖读 xlsx）
+│   ├── normalize_input.py   # 输入归一化：表格 / Day 标题 / 散文三级策略
+│   ├── parse_itinerary.py   # 任意形状行程 → Trip Schema（零依赖读 xlsx）
 │   ├── fetch_routes.py      # 真实路网几何与里程（含降级链）
 │   ├── fetch_constraints.py # 约束库三级取数 + 告警挂载
 │   ├── render_html.py       # → 单文件交互地图（零依赖，主交付物）
 │   ├── render_report.py     # → Markdown 报告
 │   ├── render_poster.py     # → 路线海报 PNG（可选，需 Pillow）
 │   └── _geo.py              # 坐标/几何工具（WGS-84 → GCJ-02、平行偏移等）
+├── tests/                   # 6 种真实脏输入的回归测试
 ├── data/
 │   ├── places.json          # 校准过的地名坐标库
 │   └── constraints.json     # 约束库种子数据（新疆北疆走廊）

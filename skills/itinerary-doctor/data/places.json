@@ -234,6 +234,113 @@
       "alias": [
         "Guozigou Bridge"
       ]
+    },
+    "新疆维吾尔自治区博物馆": {
+      "lat": 43.8181,
+      "lon": 87.58063,
+      "confidence": "high",
+      "osm": "way museum",
+      "alias": [
+        "自治区博物馆",
+        "新疆博物馆"
+      ]
+    },
+    "新疆国际大巴扎": {
+      "lat": 43.7788,
+      "lon": 87.61516,
+      "confidence": "high",
+      "osm": "attraction",
+      "alias": [
+        "国际大巴扎",
+        "二道桥大巴扎"
+      ]
+    },
+    "红山公园": {
+      "lat": 43.80829,
+      "lon": 87.60624,
+      "confidence": "high",
+      "alias": [
+        "红山"
+      ]
+    },
+    "天山天池": {
+      "lat": 43.88475,
+      "lon": 88.13038,
+      "confidence": "high",
+      "osm": "天池",
+      "alias": [
+        "天池"
+      ]
+    },
+    "天池门票站": {
+      "lat": 44.10056,
+      "lon": 88.06498,
+      "confidence": "high",
+      "osm": "天山天池售票处",
+      "alias": [
+        "天池售票处",
+        "天池游客中心",
+        "天池停车场"
+      ]
+    },
+    "阜康": {
+      "lat": 44.1647,
+      "lon": 87.9819,
+      "confidence": "medium"
+    },
+    "达坂城": {
+      "lat": 43.36373,
+      "lon": 88.30207,
+      "confidence": "high",
+      "osm": "达坂城区 city"
+    },
+    "吐鲁番": {
+      "lat": 42.9476,
+      "lon": 89.1841,
+      "confidence": "medium",
+      "alias": [
+        "吐鲁番市",
+        "高昌区"
+      ]
+    },
+    "交河故城": {
+      "lat": 42.953,
+      "lon": 89.063,
+      "confidence": "low",
+      "note": "OSM 无中文节点、英文名也未命中，坐标为手估 —— 交付前必须在图上核验"
+    },
+    "坎儿井": {
+      "lat": 42.99413,
+      "lon": 89.06562,
+      "confidence": "medium",
+      "osm": "坎儿井",
+      "alias": [
+        "坎儿井乐园",
+        "坎儿井民俗园",
+        "坎儿井源"
+      ]
+    },
+    "葡萄沟": {
+      "lat": 42.99962,
+      "lon": 89.24195,
+      "confidence": "high",
+      "osm": "葡萄沟 locality/attraction"
+    },
+    "火焰山": {
+      "lat": 42.91756,
+      "lon": 89.51189,
+      "confidence": "high",
+      "osm": "火焰山风景区 attraction",
+      "alias": [
+        "火焰山景区",
+        "火焰山大景区"
+      ]
+    },
+    "高昌故城": {
+      "lat": 42.85528,
+      "lon": 89.52778,
+      "confidence": "high",
+      "osm": "attraction"
     }
   }
 }

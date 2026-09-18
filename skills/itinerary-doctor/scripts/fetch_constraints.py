@@ -35,8 +35,17 @@ def fetch_remote(url):
         return json.load(r)
 
 
+def _updated_at(db):
+    return str((db.get("meta") or {}).get("updated_at") or "")[:10]
+
+
 def load_db(source):
-    """按 远程 → 缓存 → 内置 的顺序取数，返回 (db, 来源说明)。"""
+    """按「谁的数据更新」取数，而不是死板地「远程 → 缓存 → 内置」。
+
+    踩过的坑：缓存是早先测试时写入的 23 条旧数据，把随包分发的新快照（38 条）盖住了，
+    结果一条约束都挂不上。所以这里改成：远程（若指定且成功）优先，
+    否则在「缓存」与「内置快照」之间取 meta.updated_at 更新的那个。
+    """
     if source:
         try:
             db = fetch_remote(source)
@@ -46,16 +55,24 @@ def load_db(source):
             return db, "远程约束库 %s（已写入缓存）" % source
         except Exception as e:                                    # noqa: BLE001
             print("  ! 远程约束库拉取失败：%s" % e, file=sys.stderr)
+
+    with open(os.path.join(DATA, "constraints.json"), encoding="utf-8") as f:
+        bundled = json.load(f)
+
+    cached = None
     if os.path.exists(CACHE):
         try:
             with open(CACHE, encoding="utf-8") as f:
-                db = json.load(f)
-            age = (dt.datetime.now() - dt.datetime.fromtimestamp(os.path.getmtime(CACHE))).days
-            return db, "本地缓存（%d 天前拉取）" % age
+                cached = json.load(f)
         except Exception as e:                                    # noqa: BLE001
             print("  ! 缓存损坏：%s" % e, file=sys.stderr)
-    with open(os.path.join(DATA, "constraints.json"), encoding="utf-8") as f:
-        return json.load(f), "内置快照（随 skill 分发，可能过期）"
+
+    if cached and _updated_at(cached) > _updated_at(bundled):
+        age = (dt.datetime.now() - dt.datetime.fromtimestamp(os.path.getmtime(CACHE))).days
+        return cached, "本地缓存（%s，%d 天前拉取）" % (_updated_at(cached), age)
+    if cached and _updated_at(cached) == _updated_at(bundled) and len(cached.get("constraints", [])) > len(bundled.get("constraints", [])):
+        return cached, "本地缓存（与内置同日期，条数更多）"
+    return bundled, "内置快照（随 skill 分发，%s）" % _updated_at(bundled)
 
 
 def age_days(verified_at, today=None):
@@ -94,9 +111,19 @@ def main():
     constraints = db.get("constraints", [])
     print("约束库来源：%s（%d 条记录）" % (src_desc, len(constraints)))
 
+    # 当天识别出的点位名也要参与匹配：路线文本里常写简称（"自治区博物馆"）
+    # 或只写点位不写城市（"交河故城/火焰山"而不写"吐鲁番"）。
+    stops_by_day = {}
+    for s in trip.get("stops", []):
+        names = [s["day"]] if s.get("day") else []          # 渲染器用的字段
+        names += list(s.get("days") or [])                   # parse_itinerary 产出的字段
+        for dn in names:
+            stops_by_day.setdefault(dn, []).append(s.get("name") or "")
+
     used, stale = 0, 0
     for day in trip.get("days", []):
         hay = " ".join(str(day.get(k) or "") for k in ("route", "title", "tips", "lodging"))
+        hay += " " + " ".join(stops_by_day.get(day.get("id"), []))
         hit = []
         for c in constraints:
             if not matches(c, hay):

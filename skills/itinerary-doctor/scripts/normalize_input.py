@@ -192,6 +192,24 @@ def _val(v):
     return "" if v is None else str(v).strip()
 
 
+HTML_TAG = re.compile(r'<br\s*/?>|</?(?:b|strong|em|i|p|div|span|ul|ol|li)\s*>|&nbsp;|&amp;|&lt;|&gt;', re.I)
+
+
+def _clean_cell(s):
+    """清掉单元格里的 markdown/HTML 痕迹。
+
+    AI 生成的行程几乎都带这些：`**Day 1**`、`<br><br>`、行首 `•`。
+    不清理的话日期认不出、地名也匹配不上（实测就是这么挂的）。
+    """
+    s = HTML_TAG.sub(" ", str(s or ""))
+    s = re.sub(r'\*\*(.+?)\*\*', r'\1', s)
+    s = re.sub(r'__(.+?)__', r'\1', s)
+    s = re.sub(r'(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)', r'\1', s)
+    s = re.sub(r'^\s*[•·●○\-–—]\s*', '', s)
+    s = s.replace("⇄", "↔")
+    return re.sub(r'\s{2,}', " ", s).strip()
+
+
 def _map_header(header):
     cols = {}
     for c, v in header.items():
@@ -230,20 +248,20 @@ def strategy_table(rows, start=None):
         cols = _map_header(rows[hi])
         out = []
         for r in rows[hi + 1:]:
-            date_raw = _val(r.get(cols.get("date")))
-            route = _val(r.get(cols.get("route")))
+            date_raw = _clean_cell(_val(r.get(cols.get("date"))))
+            route = _clean_cell(_val(r.get(cols.get("route"))))
             if not date_raw and not route:
                 continue
             iso, kind, _ = parse_date_any(date_raw, _year_of(start))
             day_no = _day_no_of(date_raw) if kind == "天序号" else None
-            extra = " ".join(_val(r.get(c)) for c in r
+            extra = " ".join(_clean_cell(_val(r.get(c))) for c in r
                              if c not in (cols.get("date"), cols.get("route"),
                                           cols.get("lodging"), cols.get("travel")))
             out.append({"date_text": date_raw, "date_iso": iso or resolve_day_no(day_no, start),
                         "day_no": day_no, "route": route,
-                        "lodging": _val(r.get(cols.get("lodging"))),
+                        "lodging": _clean_cell(_val(r.get(cols.get("lodging")))),
                         "note": extra.strip(), "source_line": None,
-                        "travel": _val(r.get(cols.get("travel")))})
+                        "travel": _clean_cell(_val(r.get(cols.get("travel"))))})
         if len([x for x in out if x["route"]]) >= 2:
             return out, ("表头映射（%s）"
                          % "、".join("%s=%s" % (k, v) for k, v in cols.items()))
@@ -388,22 +406,12 @@ def strategy_prose(lines, places, start=None):
     return days, "散文/聊天式（%d 个日期锚点）" % len(anchors)
 
 
-def _places_in(text, places):
-    """贪心匹配地名（长名优先，已匹配区间不重复占用）。"""
-    found, used = [], []
-    for name, meta in places:
-        for m in re.finditer(re.escape(name), text):
-            span = (m.start(), m.end())
-            if any(not (span[1] <= s or span[0] >= e) for s, e in used):
-                continue
-            used.append(span)
-            found.append((m.start(), name, meta))
-    found.sort(key=lambda x: x[0])
-    return [(n, m) for _, n, m in found]
-
-
 # --------------------------------------------------------------- 主流程
 def _load_places(places_json=None):
+    """返回 [(匹配键, meta)]，meta 里带 _canonical 规范名。
+
+    别名命中时要归一到规范名，否则「国际大巴扎」和「新疆国际大巴扎」会被当成两个点。
+    """
     p = places_json or os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                     os.pardir, "data", "places.json")
     try:
@@ -413,11 +421,34 @@ def _load_places(places_json=None):
         return []
     keys = []
     for name, v in raw.items():
-        keys.append((name, v))
+        m = dict(v)
+        m["_canonical"] = name
+        keys.append((name, m))
         for a in v.get("alias", []) or []:
-            keys.append((str(a), v))
-    keys.sort(key=lambda x: -len(x[0]))
+            keys.append((str(a), m))
+    keys.sort(key=lambda x: -len(x[0]))                           # 长名优先
     return keys
+
+
+def _places_in(text, places):
+    """贪心匹配地名（长名优先，已匹配区间不重复占用）。返回 [(规范名, meta)]，按出现顺序。"""
+    found, used = [], []
+    for name, meta in places:
+        for m in re.finditer(re.escape(name), text):
+            span = (m.start(), m.end())
+            if any(not (span[1] <= s or span[0] >= e) for s, e in used):
+                continue
+            used.append(span)
+            found.append((m.start(), meta.get("_canonical", name), meta))
+    found.sort(key=lambda x: x[0])
+    out = []
+    for _pos, canon, meta in found:
+        # 连续同名折叠：同一处地方的不同别名会各匹配一次
+        # （"天山天池" 与 "天池" 指同一处）；但保留 A→B→A 这种真实往返。
+        if out and out[-1][0] == canon:
+            continue
+        out.append((canon, meta))
+    return out
 
 
 def _merge_same_date(rows):

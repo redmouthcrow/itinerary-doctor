@@ -59,13 +59,21 @@ def main():
             warnings.append("%s：日期没解析成确定值（原文「%s」）—— 若含「第 N 天」，"
                             "请加 --start 2026-09-25" % (day["id"], r.get("date_text")))
         days.append(day)
+        # 关键 POI 常写在「看点/活动」列而不是「路线」列（AI 生成的行程尤其如此），
+        # 两列都要匹配；但 leg 的先后顺序优先信任路线列。
         hit = _places_in(route, places) if route else []
-        if route and len(hit) < 2:
-            warnings.append("%s：路线里只认出 %d 个地名，请手工补 stops/legs —— %s"
-                            % (day["id"], len(hit), route[:40]))
-        elif not route:
+        note_hit = _places_in(day["note"], places) if day["note"] else []
+        has_route_place = len([n for n, _ in hit]) >= 2
+        if route and not has_route_place and len(note_hit) < 2:
+            warnings.append("%s：路线与看点里都没认出足够地名，请手工补 stops/legs —— %s"
+                            % (day["id"], route[:40]))
+        elif not route and not note_hit:
             warnings.append("%s：这一天没有路线文本（可能原文只写了日期/住宿）" % day["id"])
-        for name, meta in hit:
+        seen_names = set()
+        for name, meta in list(hit) + list(note_hit):
+            if name in seen_names:
+                continue
+            seen_names.add(name)
             raw_stops.setdefault(name, {"name": name, "lat": meta["lat"], "lon": meta["lon"],
                                         "confidence": meta.get("confidence", "high"),
                                         "days": []})
@@ -82,7 +90,8 @@ def main():
 
     order = []
     for d in days:
-        for name, _m in _places_in(d["route"] or "", places):
+        for name, _m in (_places_in(d["route"] or "", places)
+                         + _places_in(d.get("note") or "", places)):
             if name not in order:
                 order.append(name)
     stops = []
@@ -92,9 +101,22 @@ def main():
 
     legs = []
     for d in days:
-        hit = [n for n, _m in _places_in(d["route"] or "", places)]
-        for a, b in zip(hit, hit[1:]):
-            legs.append({"from": a, "to": b, "day": d["id"], "dashed": False})
+        route_seq = [n for n, _m in _places_in(d["route"] or "", places)]
+        note_seq = [n for n, _m in _places_in(d.get("note") or "", places)]
+        seq, from_note = route_seq, False
+        # 看点列如果包含路线列的全部点位、且更完整，就用它做草稿
+        # （典型：路线列只写"乌鲁木齐 ↔ 吐鲁番一日游"，看点列才是真正的点位动线）
+        if len(note_seq) >= 2 and len(note_seq) > len(route_seq) and set(route_seq) <= set(note_seq):
+            seq, from_note = note_seq, True
+        elif len(seq) < 2 and len(note_seq) >= 2:
+            seq, from_note = note_seq, True
+        for a, b in zip(seq, seq[1:]):
+            if a == b:
+                continue
+            leg = {"from": a, "to": b, "day": d["id"], "dashed": False}
+            if from_note:
+                leg["order_from"] = "note"          # 顺序来自正文，置信度更低，需复核
+            legs.append(leg)
 
     trip = {
         "trip": {"title": args.title or os.path.splitext(os.path.basename(args.input))[0],

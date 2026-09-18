@@ -224,6 +224,28 @@ STOPS.forEach(function(s){
 var bounds=L.latLngBounds([]);
 LEGS.forEach(function(l){l.pts.forEach(function(p){bounds.extend(p);});});
 map.fitBounds(bounds,{padding:[26,26]});
+// 自愈：容器在页面加载时可能是 0×0（后台标签页 / 隐藏面板 / 会话恢复），
+// 此时 fitBounds 会算出退化视图（实测 z=18、只加载 1 张瓦片）。
+// 注意必须读**实时 DOM 尺寸**——map.getSize() 返回的是 Leaflet 的缓存值，
+// 正是那个 0，拿它做判断会永远提前返回。
+// 定时器 + ResizeObserver 都依赖时序，实测在本环境里都赶不上，所以这里用轮询兜底。
+var didFit = map.getSize().x >= 50;
+function ensureSized(){
+  var el = map.getContainer();
+  if (el.clientWidth < 50 || el.clientHeight < 50) return false;
+  map.invalidateSize();
+  if (!didFit){ map.fitBounds(bounds,{padding:[26,26]}); didFit = true; }
+  return true;
+}
+(function waitForSize(tries){
+  if (ensureSized()) return;
+  if (tries > 0) setTimeout(function(){ waitForSize(tries - 1); }, 150);
+})(200);                                                   // 最多轮询约 30 秒
+if (window.ResizeObserver){
+  try { new ResizeObserver(function(){ ensureSized(); }).observe(map.getContainer()); } catch(e){}
+}
+window.addEventListener('resize', function(){ map.invalidateSize(); });
+document.addEventListener('visibilitychange', function(){ if(!document.hidden) ensureSized(); });
 (function(){
   var tb=document.getElementById('toggles');
   tb.innerHTML='<button data-base="vec" class="'+(__DEFAULT_BASE__==='vec'?'on':'')+'">矢量路网</button>'+

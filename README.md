@@ -1,5 +1,7 @@
 # 行程体检 · itinerary-doctor
 
+[![skills.sh](https://skills.sh/b/redmouthcrow/itinerary-doctor)](https://skills.sh/redmouthcrow/itinerary-doctor)
+
 > 把一份**已经存在的行程**变成一份**能落地的行程**。
 > 查时令、查预约、查封路、查每日驾驶强度；在"机票和部分酒店已经订了"的约束下，
 > 算出**该退哪晚、该改期哪晚、该新订哪晚**，并产出可直接转发客户的交互路线图。

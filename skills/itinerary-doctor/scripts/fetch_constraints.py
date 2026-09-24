@@ -19,6 +19,7 @@ import argparse
 import datetime as dt
 import json
 import os
+import re
 import sys
 import urllib.request
 
@@ -75,6 +76,31 @@ def load_db(source):
     return bundled, "内置快照（随 skill 分发，%s）" % _updated_at(bundled)
 
 
+def window_covers(constraint, day):
+    """约束带时令窗口时：当天日期是否落在任一窗口内。
+
+    用途：季节类提示只在对应季节才有意义。实测试单是 6 月伊犁，而库里那条
+    "4 月与 5 月是两条不同的行程"被 7 天里挂了 6 天——对 6 月行程纯属噪音。
+    没有 window 的约束（预约/票价/证件等全年有效）一律保留。
+    """
+    windows = constraint.get("window")
+    if not windows or day is None:
+        return True
+    for w in windows:
+        a, b = _md(w.get("from")), _md(w.get("to"))
+        if not a or not b:
+            continue
+        cur = (day.month, day.day)
+        if (a <= cur <= b) if a <= b else (cur >= a or cur <= b):
+            return True
+    return False
+
+
+def _md(s):
+    m = re.match(r'^(\d{1,2})-(\d{1,2})$', str(s).strip())
+    return (int(m.group(1)), int(m.group(2))) if m else None
+
+
 def age_days(verified_at, today=None):
     try:
         d = dt.date.fromisoformat(str(verified_at)[:10])
@@ -120,13 +146,22 @@ def main():
         for dn in names:
             stops_by_day.setdefault(dn, []).append(s.get("name") or "")
 
-    used, stale = 0, 0
+    used, stale, skipped = 0, 0, 0
     for day in trip.get("days", []):
+        try:
+            day_date = dt.date.fromisoformat(str(day.get("date"))[:10])
+        except (ValueError, TypeError):
+            day_date = None
         hay = " ".join(str(day.get(k) or "") for k in ("route", "title", "tips", "lodging"))
         hay += " " + " ".join(stops_by_day.get(day.get("id"), []))
         hit = []
         for c in constraints:
+            if c.get("scope") == "meta":        # 走廊级决策说明，不按地点挂载
+                continue
             if not matches(c, hay):
+                continue
+            if not window_covers(c, day_date):
+                skipped += 1
                 continue
             a = age_days(c.get("verified_at"), today)
             level = c.get("level", "soft")
@@ -156,7 +191,8 @@ def main():
 
     with open(args.trip, "w", encoding="utf-8") as f:
         json.dump(trip, f, ensure_ascii=False, indent=1)
-    print("已写回 %s（挂载 %d 条，其中 %d 条已过时效、标记为待核实）" % (args.trip, used, stale))
+    print("已写回 %s（挂载 %d 条，其中 %d 条已过时效、标记为待核实；"
+          "另有 %d 条因季节不符被跳过）" % (args.trip, used, stale, skipped))
     if used == 0:
         print("提示：没有任何约束命中——先确认 places.json 与行程里的地名写法一致。")
 

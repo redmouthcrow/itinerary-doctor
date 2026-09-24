@@ -107,6 +107,10 @@ def resolve_text(text, trip, day=None):
             return fmt_num(total_hours(trip))
         if key == "days":
             return str(len(trip.get("days", [])))
+        if key == "nights":
+            # 有住宿的天数（返程日 lodging 常写 "—"）
+            return str(len([d for d in trip.get("days", []) or []
+                            if (d.get("lodging") or "").strip() not in ("", "—", "-")]))
         if key == "stops":
             return str(len(trip.get("stops", [])))
         if key == "legs":

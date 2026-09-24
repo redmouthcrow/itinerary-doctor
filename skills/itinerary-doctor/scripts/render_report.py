@@ -104,9 +104,22 @@ def main():
             if meta:
                 A("  - " + "；".join(meta))
 
+    # ---- 时令窗口核对（有窗口数据的点位才判定）----
+    try:
+        from match_season import analyze, markdown_section
+        season_md = markdown_section(analyze(trip))
+    except Exception as e:                                        # noqa: BLE001
+        season_md = None
+        print("  ! 时令核对跳过：%s" % e, file=sys.stderr)
+    if season_md:
+        A("")
+        A("## 四、时令窗口核对")
+        A("")
+        A(season_md)
+
     # ---- 待核实与风险 ----
     A("")
-    A("## 四、待核实与风险项")
+    A("## 五、待核实与风险项")
     A("")
     cm = trip.get("constraints_meta", {})
     if cm:
@@ -133,7 +146,7 @@ def main():
 
     # ---- 免责 ----
     A("")
-    A("## 五、免责与核实提示")
+    A("## 六、免责与核实提示")
     A("")
     A("- 政策、票价、开放时间与预约规则会随时调整，**以景区当日公告为准**。")
     A("- 建议在出发前 24 小时再核对一次：预约是否出票、道路是否封闭、天气是否影响行程。")

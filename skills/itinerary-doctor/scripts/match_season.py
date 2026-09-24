@@ -70,6 +70,16 @@ def match_constraints(place_name, constraints, idx):
             if not t:
                 continue
             canon = idx.get(t, (None, None))[0]
+            # 长度守卫：点位名（或约束里的 token）短到 1 个字符时，不能靠子串匹配 ——
+            # 否则测试里的 "A/B/C" 会被 "西藏全区A级旅游景区" 这种长名字命中。
+            if len(t) >= 2 and len(low) >= 2 and (t in low or low in t):
+                hits.append(c)
+                break
+            if canon and len(low) >= 2 and (canon == place_name or low in canon.lower()):
+                hits.append(c)
+                break
+            continue
+            # 下面这行留着是为了对齐原文缩进，不参与逻辑
             if t in low or low in t or (canon and (canon == place_name or low in canon.lower())):
                 hits.append(c)
                 break

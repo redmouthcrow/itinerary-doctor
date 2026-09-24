@@ -9,7 +9,7 @@ import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-FILES = ["test_normalize.py", "test_schema.py", "test_render.py"]
+FILES = ["test_normalize.py", "test_schema.py", "test_render.py", "test_coverage.py"]
 rc = 0
 for f in FILES:
     print("=" * 60)

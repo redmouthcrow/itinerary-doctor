@@ -246,12 +246,21 @@ def strategy_table(rows, start=None):
     hi = _find_header(rows)
     if hi is not None:
         cols = _map_header(rows[hi])
-        out = []
+        out, miss_streak = [], 0
         for r in rows[hi + 1:]:
             date_raw = _clean_cell(_val(r.get(cols.get("date"))))
             route = _clean_cell(_val(r.get(cols.get("route"))))
             if not date_raw and not route:
                 continue
+            # 行程表的每一行都该有可解析的日期；连续两行解析不出，说明这是文末另起的
+            # 一张表格（例如"核心注意事项"表），不能再当行程行往下吃。
+            _iso0, _kind0, _raw0 = parse_date_any(date_raw, _year_of(start))
+            if not _iso0 and _kind0 != "天序号":
+                miss_streak += 1
+                if miss_streak >= 2:
+                    break
+                continue                       # 解析不出日期的行不算行程行（如文末表的表头）
+            miss_streak = 0
             iso, kind, _ = parse_date_any(date_raw, _year_of(start))
             day_no = _day_no_of(date_raw) if kind == "天序号" else None
             extra = " ".join(_clean_cell(_val(r.get(c))) for c in r

@@ -517,6 +517,3130 @@
       "alias": [
         "喀拉峻草原"
       ]
+    },
+    "康定": {
+      "lat": 30.07767,
+      "lon": 102.01434,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "泸定": {
+      "lat": 29.95047,
+      "lon": 102.23941,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "折多山": {
+      "lat": 30.1173,
+      "lon": 101.79527,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "新都桥": {
+      "lat": 30.07212,
+      "lon": 101.47649,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "塔公寺": {
+      "lat": 30.32143,
+      "lon": 101.52065,
+      "confidence": "high",
+      "corridor": "川西",
+      "alias": [
+        "ལྷ་སྒང་དགོན 塔公寺"
+      ]
+    },
+    "雅拉雪山": {
+      "lat": 30.38539,
+      "lon": 101.66267,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "云绕雅拉雅拉雪山观景台"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "丹巴": {
+      "lat": 30.85217,
+      "lon": 101.93377,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "丹巴縣古碉群"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "甲居藏寨": {
+      "lat": 30.95666,
+      "lon": 101.87854,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "党岭": {
+      "lat": 31.07336,
+      "lon": 101.40528,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "道孚": {
+      "lat": 30.97909,
+      "lon": 101.1236,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "道孚县 རྟའུ།"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "八美": {
+      "lat": 31.83815,
+      "lon": 98.62122,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "墨石公园": {
+      "lat": 30.44879,
+      "lon": 101.54102,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "墨石公园景区"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "炉霍": {
+      "lat": 31.39954,
+      "lon": 100.67476,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "炉霍县 བྲག་འགོ།"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "色达": {
+      "lat": 28.80254,
+      "lon": 102.85832,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "喇荣五明佛学院": {
+      "lat": 32.1531,
+      "lon": 100.46927,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "色达喇荣五明佛学院 གསེར་རྟ་བླ་ར"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "甘孜": {
+      "lat": 31.62736,
+      "lon": 99.9887,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "甘孜镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "白玉": {
+      "lat": 30.5213,
+      "lon": 100.3024,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "亚青寺": {
+      "lat": 30.94374,
+      "lon": 99.61087,
+      "confidence": "high",
+      "corridor": "川西",
+      "alias": [
+        "ཡ་ཆེན་སྒར་ 亚青寺"
+      ]
+    },
+    "新龙": {
+      "lat": 26.84635,
+      "lon": 102.80256,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "理塘": {
+      "lat": 29.97563,
+      "lon": 100.25277,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "稻城": {
+      "lat": 29.04085,
+      "lon": 100.2969,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "稻城县 འདབ་པ།"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "亚丁": {
+      "lat": 28.46142,
+      "lon": 100.34319,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "亚丁观景台"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "仙乃日": {
+      "lat": 28.39495,
+      "lon": 100.3508,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "央迈勇": {
+      "lat": 28.35703,
+      "lon": 100.35671,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "牛奶海": {
+      "lat": 28.37448,
+      "lon": 100.34673,
+      "confidence": "high",
+      "corridor": "川西"
+    },
+    "洛绒牛场": {
+      "lat": 28.3909,
+      "lon": 100.37976,
+      "confidence": "high",
+      "corridor": "川西"
+    },
+    "海子山": {
+      "lat": 30.39349,
+      "lon": 99.56943,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "姊妹湖": {
+      "lat": 30.29994,
+      "lon": 99.55156,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "巴塘": {
+      "lat": 30.27854,
+      "lon": 99.40326,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "措普沟": {
+      "lat": 31.9687,
+      "lon": 98.70898,
+      "confidence": "medium",
+      "corridor": "川西",
+      "alias": [
+        "错普沟"
+      ],
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "雅江": {
+      "lat": 30.1066,
+      "lon": 101.0245,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "高尔寺山": {
+      "lat": 30.03633,
+      "lon": 101.34201,
+      "confidence": "high",
+      "corridor": "川西"
+    },
+    "贡嘎": {
+      "lat": 29.29014,
+      "lon": 91.03847,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "贡嘎山",
+          "lat": 29.59585,
+          "lon": 101.87906
+        }
+      ]
+    },
+    "子梅垭口": {
+      "lat": 29.51789,
+      "lon": 101.72109,
+      "confidence": "high",
+      "corridor": "川西"
+    },
+    "上木居": {
+      "lat": 29.49179,
+      "lon": 101.65152,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "上木居村"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "莲花湖": {
+      "lat": 29.27025,
+      "lon": 101.33819,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "木格措": {
+      "lat": 30.19028,
+      "lon": 101.90328,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "兰州": {
+      "lat": 36.03418,
+      "lon": 103.84851,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "中山桥": {
+      "lat": 36.06328,
+      "lon": 103.81487,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "武威": {
+      "lat": 37.88192,
+      "lon": 102.63458,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "张掖": {
+      "lat": 38.90416,
+      "lon": 100.49742,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "七彩丹霞": {
+      "lat": 38.91542,
+      "lon": 100.13051,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "张掖七彩丹霞旅游景区东门游客服务中心"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "马蹄寺": {
+      "lat": 38.48415,
+      "lon": 100.41735,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "马蹄寺石窟群"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "冰沟丹霞": {
+      "lat": 38.99246,
+      "lon": 99.9024,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "冰沟丹霞景区"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "嘉峪关": {
+      "lat": 39.76384,
+      "lon": 98.25394,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "嘉峪关关城": {
+      "lat": 39.80247,
+      "lon": 98.21913,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "嘉峪关关城景区"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "酒泉": {
+      "lat": 39.70403,
+      "lon": 98.499,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "敦煌": {
+      "lat": 40.16785,
+      "lon": 94.78341,
+      "confidence": "medium",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "莫高窟": {
+      "lat": 40.03732,
+      "lon": 94.80421,
+      "confidence": "high"
+    },
+    "鸣沙山": {
+      "lat": 40.08371,
+      "lon": 94.67492,
+      "confidence": "medium",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "月牙泉": {
+      "lat": 40.09659,
+      "lon": 94.67041,
+      "confidence": "low",
+      "alias": [
+        "月牙泉村"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "玉门关": {
+      "lat": 40.35361,
+      "lon": 93.86408,
+      "confidence": "low",
+      "alias": [
+        "玉门关遗址"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "阳关": {
+      "lat": 34.32015,
+      "lon": 104.48639,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "瓜州": {
+      "lat": 40.56658,
+      "lon": 95.77244,
+      "confidence": "medium",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "锁阳城": {
+      "lat": 40.26261,
+      "lon": 95.98021,
+      "confidence": "low",
+      "alias": [
+        "锁阳城镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "白银": {
+      "lat": 36.5459,
+      "lon": 104.16865,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "白银市"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "景泰": {
+      "lat": 37.19371,
+      "lon": 104.05299,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "黄河石林": {
+      "lat": 36.91029,
+      "lon": 104.29232,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "临夏": {
+      "lat": 35.55741,
+      "lon": 103.23246,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "炳灵寺": {
+      "lat": 35.80362,
+      "lon": 103.04264,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "海拉尔": {
+      "lat": 49.30901,
+      "lon": 119.72107,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "满洲里": {
+      "lat": 49.58411,
+      "lon": 117.44403,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "国门景区": {
+      "lat": 49.6264,
+      "lon": 117.3483,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "国门景区游客中心"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "额尔古纳": {
+      "lat": 50.22801,
+      "lon": 120.17531,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "额尔古纳民族博物馆"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "恩和": {
+      "lat": 50.8011,
+      "lon": 119.84378,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "恩和西山"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "室韦": {
+      "lat": 51.1611,
+      "lon": 120.03277,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "临江屯": {
+      "lat": 46.60669,
+      "lon": 123.73877,
+      "confidence": "high",
+      "corridor": "内蒙"
+    },
+    "莫尔道嘎": {
+      "lat": 51.23301,
+      "lon": 120.802,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "白鹿岛": {
+      "lat": 51.951,
+      "lon": 120.84735,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "白鹿岛观景塔"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "根河": {
+      "lat": 50.77528,
+      "lon": 121.50299,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "冷极村": {
+      "lat": 51.15126,
+      "lon": 121.27412,
+      "confidence": "high",
+      "corridor": "内蒙"
+    },
+    "敖鲁古雅": {
+      "lat": 50.77791,
+      "lon": 121.46897,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "敖鲁古雅乡"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "满归": {
+      "lat": 52.03493,
+      "lon": 122.06742,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "伊图里河": {
+      "lat": 50.62766,
+      "lon": 121.54433,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "牙克石": {
+      "lat": 49.27703,
+      "lon": 120.73118,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "扎兰屯": {
+      "lat": 48.0124,
+      "lon": 122.74026,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "阿尔山": {
+      "lat": 47.17037,
+      "lon": 119.94124,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "阿尔山国家森林公园": {
+      "lat": 47.27315,
+      "lon": 120.29301,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "阿尔山国家森林公园金江沟游客中心"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "天池": {
+      "lat": 47.29355,
+      "lon": 120.41182,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "天池镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "杜鹃湖": {
+      "lat": 47.41903,
+      "lon": 120.55751,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "驼峰岭天池": {
+      "lat": 47.45669,
+      "lon": 120.64202,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "新巴尔虎左旗": {
+      "lat": 48.40399,
+      "lon": 118.51697,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "新巴尔虎右旗": {
+      "lat": 49.1532,
+      "lon": 115.39689,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "呼伦湖": {
+      "lat": 49.32364,
+      "lon": 117.65352,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "鄂温克": {
+      "lat": 48.10557,
+      "lon": 124.59927,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "兴旺鄂温克族乡"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "红花尔基": {
+      "lat": 48.27328,
+      "lon": 119.98593,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "红花尔基镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "绰尔河": {
+      "lat": 46.79196,
+      "lon": 122.81072,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "额济纳": {
+      "lat": 41.8969,
+      "lon": 101.03177,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "胡杨林": {
+      "lat": 40.03667,
+      "lon": 98.82388,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "居延海": {
+      "lat": 42.28272,
+      "lon": 101.39592,
+      "confidence": "high",
+      "corridor": "内蒙"
+    },
+    "巴丹吉林沙漠": {
+      "lat": 40.41404,
+      "lon": 101.78867,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "巴丹湖": {
+      "lat": 39.54981,
+      "lon": 102.36489,
+      "confidence": "high",
+      "corridor": "内蒙"
+    },
+    "阿拉善右旗": {
+      "lat": 39.21165,
+      "lon": 101.68087,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "阿拉善右旗汽車站"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "阿拉善左旗": {
+      "lat": 38.83237,
+      "lon": 105.66054,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "alias": [
+        "阿拉善左旗 ᠠᠯᠠᠱᠠ ᠵᠡᠭᠦᠨ"
+      ],
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "腾格里沙漠": {
+      "lat": 37.52571,
+      "lon": 105.10797,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "腾格里沙漠湿地金沙岛旅游区"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "西宁": {
+      "lat": 36.62076,
+      "lon": 101.81304,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "西宁",
+          "lat": 36.62076,
+          "lon": 101.81304
+        }
+      ]
+    },
+    "塔尔寺": {
+      "lat": 36.48777,
+      "lon": 101.56599,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "塔尔寺",
+          "lat": 36.49263,
+          "lon": 101.5657
+        }
+      ]
+    },
+    "青海湖": {
+      "lat": 36.92541,
+      "lon": 100.12804,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "青海湖",
+          "lat": 36.92541,
+          "lon": 100.12804
+        }
+      ]
+    },
+    "日月山": {
+      "lat": 36.56455,
+      "lon": 100.99251,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "倒淌河": {
+      "lat": 36.39838,
+      "lon": 100.98313,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "茶卡盐湖": {
+      "lat": 36.69426,
+      "lon": 99.10205,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "茶卡盐湖",
+          "lat": 36.69426,
+          "lon": 99.10205
+        }
+      ]
+    },
+    "德令哈": {
+      "lat": 37.43724,
+      "lon": 95.451,
+      "confidence": "medium",
+      "alias": [
+        "G315/德令哈/乌兰"
+      ],
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "德令哈",
+          "lat": 37.31479,
+          "lon": 97.383
+        }
+      ]
+    },
+    "小柴旦湖": {
+      "lat": 37.49465,
+      "lon": 95.51391,
+      "confidence": "high"
+    },
+    "二郎剑": {
+      "lat": 36.57999,
+      "lon": 100.49493,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "二郎剑景区"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "黑马河": {
+      "lat": 36.69641,
+      "lon": 99.73711,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "都兰": {
+      "lat": 35.64495,
+      "lon": 100.65962,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "可鲁克湖": {
+      "lat": 37.35007,
+      "lon": 96.91109,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "外星人遗址": {
+      "lat": 37.35274,
+      "lon": 96.86014,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "大柴旦": {
+      "lat": 37.52665,
+      "lon": 95.75483,
+      "confidence": "medium",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "水上雅丹": {
+      "lat": 37.62512,
+      "lon": 93.73342,
+      "confidence": "low",
+      "alias": [
+        "水上雅丹码头旅拍店"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "翡翠湖": {
+      "lat": 36.62555,
+      "lon": 90.83702,
+      "confidence": "medium",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "东台吉乃尔湖": {
+      "lat": 37.50483,
+      "lon": 93.91551,
+      "confidence": "high"
+    },
+    "西台吉乃尔湖": {
+      "lat": 37.75719,
+      "lon": 93.37993,
+      "confidence": "high"
+    },
+    "俄博梁": {
+      "lat": 38.35464,
+      "lon": 92.88117,
+      "confidence": "low",
+      "alias": [
+        "俄博梁雅丹"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "冷湖": {
+      "lat": 38.61651,
+      "lon": 93.35641,
+      "confidence": "low",
+      "alias": [
+        "冷湖石油工业遗址"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "茫崖": {
+      "lat": 38.34778,
+      "lon": 90.1528,
+      "confidence": "medium",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "艾肯泉": {
+      "lat": 38.11249,
+      "lon": 90.57678,
+      "confidence": "high"
+    },
+    "察尔汗盐湖": {
+      "lat": 36.85896,
+      "lon": 95.27284,
+      "confidence": "low",
+      "alias": [
+        "察尔汗盐湖景区"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "格尔木": {
+      "lat": 36.34317,
+      "lon": 95.07782,
+      "confidence": "medium",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "昆仑山口": {
+      "lat": 35.64067,
+      "lon": 94.06765,
+      "confidence": "medium",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "可可西里": {
+      "lat": 35.32521,
+      "lon": 93.32584,
+      "confidence": "medium",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "索南达杰保护站": {
+      "lat": 35.43223,
+      "lon": 93.6002,
+      "confidence": "high"
+    },
+    "玉珠峰": {
+      "lat": 35.65251,
+      "lon": 94.25076,
+      "confidence": "medium",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "不冻泉": {
+      "lat": 35.51888,
+      "lon": 93.91233,
+      "confidence": "medium",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "曲麻莱": {
+      "lat": 34.9534,
+      "lon": 95.13851,
+      "confidence": "low",
+      "alias": [
+        "曲麻莱县།"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "玛多": {
+      "lat": 34.89033,
+      "lon": 98.20503,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "拉萨": {
+      "lat": 29.62586,
+      "lon": 91.06874,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "布达拉宫": {
+      "lat": 29.6575,
+      "lon": 91.11667,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "alias": [
+        "布达拉宫 ཕོ་བྲང་པོ་ཏ་ལ།"
+      ],
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "大昭寺": {
+      "lat": 29.65289,
+      "lon": 91.13038,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "大昭寺广场"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "八廓街": {
+      "lat": 29.65169,
+      "lon": 91.13135,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "八廓街道 བར་སྐོ་ཁྲོམ་གཞུང།"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "色拉寺": {
+      "lat": 29.69789,
+      "lon": 91.133,
+      "confidence": "high",
+      "corridor": "西藏",
+      "alias": [
+        "སེ་ར་དགོན། 色拉寺"
+      ]
+    },
+    "哲蚌寺": {
+      "lat": 29.67678,
+      "lon": 91.04693,
+      "confidence": "high",
+      "corridor": "西藏",
+      "alias": [
+        "འབྲས་སྤུངས་དགོན། 哲蚌寺"
+      ]
+    },
+    "纳木错": {
+      "lat": 28.17333,
+      "lon": 86.7889,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "纳木错里"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "羊八井": {
+      "lat": 30.10572,
+      "lon": 90.53905,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "当雄": {
+      "lat": 30.47463,
+      "lon": 91.10461,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "山南": {
+      "lat": 29.27032,
+      "lon": 91.75032,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "桑耶寺": {
+      "lat": 29.32664,
+      "lon": 91.50238,
+      "confidence": "high",
+      "corridor": "西藏"
+    },
+    "雍布拉康": {
+      "lat": 29.14259,
+      "lon": 91.8028,
+      "confidence": "high",
+      "corridor": "西藏",
+      "alias": [
+        "ཡུམ་བུ་བླ་སྒང 雍布拉康"
+      ]
+    },
+    "江孜": {
+      "lat": 28.91572,
+      "lon": 89.60355,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "江孜镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "白居寺": {
+      "lat": 28.92453,
+      "lon": 89.59508,
+      "confidence": "high",
+      "corridor": "西藏",
+      "alias": [
+        "དཔལ་འཁོར་ཆོས་སྡེ 白居寺"
+      ]
+    },
+    "宗山抗英遗址": {
+      "lat": 28.91786,
+      "lon": 89.59956,
+      "confidence": "high",
+      "corridor": "西藏",
+      "alias": [
+        "རྒྱལ་རྩེ་རྫོང 宗山抗英遗址"
+      ]
+    },
+    "浪卡子": {
+      "lat": 28.9727,
+      "lon": 90.39958,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "浪卡子镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "日喀则": {
+      "lat": 29.22386,
+      "lon": 88.91215,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "扎什伦布寺": {
+      "lat": 29.26832,
+      "lon": 88.87003,
+      "confidence": "high",
+      "corridor": "西藏",
+      "alias": [
+        "扎什伦布寺 བཀྲ་ཤིས་ལྷུན་པོ་"
+      ]
+    },
+    "萨迦寺": {
+      "lat": 28.90541,
+      "lon": 88.01794,
+      "confidence": "high",
+      "corridor": "西藏"
+    },
+    "卡若拉冰川": {
+      "lat": 28.89919,
+      "lon": 90.1641,
+      "confidence": "high",
+      "corridor": "西藏"
+    },
+    "林芝": {
+      "lat": 29.52974,
+      "lon": 94.43633,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "八一镇": {
+      "lat": 29.64216,
+      "lon": 94.35876,
+      "confidence": "high",
+      "corridor": "西藏"
+    },
+    "巴松措": {
+      "lat": 30.00764,
+      "lon": 93.91445,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "巴松措旅游风景区"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "鲁朗": {
+      "lat": 29.83089,
+      "lon": 94.73817,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "南迦巴瓦峰": {
+      "lat": 29.63129,
+      "lon": 95.05491,
+      "confidence": "high",
+      "corridor": "西藏",
+      "alias": [
+        "南迦巴瓦峰/གནམས་ལྕགས་འབར་བ་"
+      ]
+    },
+    "雅鲁藏布大峡谷": {
+      "lat": 29.59963,
+      "lon": 94.82633,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "索松村": {
+      "lat": 29.57655,
+      "lon": 94.8917,
+      "confidence": "high",
+      "corridor": "西藏",
+      "alias": [
+        "索松村 སོ་གསུམ"
+      ]
+    },
+    "波密": {
+      "lat": 29.89696,
+      "lon": 95.59679,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "然乌湖": {
+      "lat": 30.08491,
+      "lon": 97.25,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "然乌湖国际自驾与房车营地"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "米堆冰川": {
+      "lat": 29.47079,
+      "lon": 96.49994,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "米堆冰川观景台"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "来古冰川": {
+      "lat": 29.3054,
+      "lon": 96.82752,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "来古冰川观景台"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "通麦": {
+      "lat": 30.10432,
+      "lon": 95.08143,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "墨脱": {
+      "lat": 29.32501,
+      "lon": 95.32901,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "墨脱镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "九寨沟": {
+      "lat": 33.14898,
+      "lon": 104.23486,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "九寨沟",
+          "lat": 33.14898,
+          "lon": 104.23486
+        },
+        {
+          "name": "九寨沟",
+          "lat": 33.14898,
+          "lon": 104.23486
+        }
+      ]
+    },
+    "黄龙": {
+      "lat": 31.32246,
+      "lon": 107.33383,
+      "confidence": "medium",
+      "corridor": "其他",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "黄龙乡",
+          "lat": 32.78434,
+          "lon": 103.90642
+        },
+        {
+          "name": "黄龙乡",
+          "lat": 32.78434,
+          "lon": 103.90642
+        }
+      ]
+    },
+    "达古冰川": {
+      "lat": 32.22931,
+      "lon": 102.77114,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "达古冰川索道"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "达古冰川索道",
+          "lat": 32.22931,
+          "lon": 102.77114
+        },
+        {
+          "name": "达古冰川索道",
+          "lat": 32.22931,
+          "lon": 102.77114
+        }
+      ]
+    },
+    "海螺沟": {
+      "lat": 29.58696,
+      "lon": 102.0382,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "海螺沟",
+          "lat": 29.60186,
+          "lon": 102.17415
+        },
+        {
+          "name": "海螺沟",
+          "lat": 29.60186,
+          "lon": 102.17415
+        }
+      ]
+    },
+    "扎尕那": {
+      "lat": 34.23843,
+      "lon": 103.18752,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "扎尕那",
+          "lat": 34.23843,
+          "lon": 103.18752
+        },
+        {
+          "name": "扎尕那",
+          "lat": 34.23843,
+          "lon": 103.18752
+        }
+      ]
+    },
+    "门源": {
+      "lat": 37.42653,
+      "lon": 101.52625,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "门源",
+          "lat": 37.42653,
+          "lon": 101.52625
+        },
+        {
+          "name": "门源",
+          "lat": 37.42653,
+          "lon": 101.52625
+        },
+        {
+          "name": "门源",
+          "lat": 37.42653,
+          "lon": 101.52625
+        }
+      ]
+    },
+    "米亚罗": {
+      "lat": 31.64413,
+      "lon": 102.82336,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "米亚罗",
+          "lat": 31.64413,
+          "lon": 102.82336
+        },
+        {
+          "name": "米亚罗",
+          "lat": 31.64413,
+          "lon": 102.82336
+        }
+      ]
+    },
+    "冈仁波齐": {
+      "lat": 31.01498,
+      "lon": 81.26114,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "冈仁波齐",
+          "lat": 31.01498,
+          "lon": 81.26114
+        }
+      ]
+    },
+    "普兰": {
+      "lat": 30.28862,
+      "lon": 81.17817,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "普兰镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "普兰镇",
+          "lat": 30.28862,
+          "lon": 81.17817
+        }
+      ]
+    },
+    "漳扎镇": {
+      "lat": 33.29597,
+      "lon": 103.86495,
+      "confidence": "high",
+      "corridor": "川西"
+    },
+    "珠峰大本营": {
+      "lat": 28.13653,
+      "lon": 86.85547,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "稻城亚丁": {
+      "lat": 28.4089,
+      "lon": 100.37054,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "稻城亚丁景区"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "新桥": {
+      "lat": 29.11313,
+      "lon": 104.45168,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "四姑娘山": {
+      "lat": 30.99245,
+      "lon": 102.83473,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "四姑娘山",
+          "lat": 30.99245,
+          "lon": 102.83473
+        },
+        {
+          "name": "四姑娘山",
+          "lat": 30.99245,
+          "lon": 102.83473
+        }
+      ]
+    },
+    "双桥沟": {
+      "lat": 30.98175,
+      "lon": 102.76785,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "双桥沟",
+          "lat": 30.98175,
+          "lon": 102.76785
+        },
+        {
+          "name": "双桥沟",
+          "lat": 30.98175,
+          "lon": 102.76785
+        }
+      ]
+    },
+    "冷古寺": {
+      "lat": 29.81943,
+      "lon": 99.64394,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "老冷古寺"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "老冷古寺",
+          "lat": 29.81943,
+          "lon": 99.64394
+        }
+      ]
+    },
+    "德格": {
+      "lat": 31.8089,
+      "lon": 98.58067,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "德格县 སྡེ་དགེ།"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "德格县 སྡེ་དགེ།",
+          "lat": 31.8089,
+          "lon": 98.58067
+        }
+      ]
+    },
+    "印经院": {
+      "lat": 30.00429,
+      "lon": 100.27581,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "印经院",
+          "lat": 30.00429,
+          "lon": 100.27581
+        }
+      ]
+    },
+    "雀儿山": {
+      "lat": 31.78598,
+      "lon": 99.07211,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "雀儿山",
+          "lat": 31.78598,
+          "lon": 99.07211
+        }
+      ]
+    },
+    "石渠": {
+      "lat": 32.48661,
+      "lon": 98.0184,
+      "confidence": "medium",
+      "corridor": "川西",
+      "alias": [
+        "石渠 - 洛须"
+      ],
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "石渠 - 洛须",
+          "lat": 32.48661,
+          "lon": 98.0184
+        }
+      ]
+    },
+    "燕子沟": {
+      "lat": 29.68733,
+      "lon": 102.08287,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "燕子沟",
+          "lat": 29.68733,
+          "lon": 102.08287
+        }
+      ]
+    },
+    "磨西镇": {
+      "lat": 29.64253,
+      "lon": 102.12386,
+      "confidence": "high",
+      "corridor": "川西",
+      "other_candidates": [
+        {
+          "name": "磨西镇",
+          "lat": 29.64253,
+          "lon": 102.12386
+        }
+      ]
+    },
+    "马尔康": {
+      "lat": 31.90432,
+      "lon": 102.2177,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "马尔康镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "马尔康镇",
+          "lat": 31.90432,
+          "lon": 102.2177
+        }
+      ]
+    },
+    "卓克基土司官寨": {
+      "lat": 31.86852,
+      "lon": 102.29182,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "卓克基土司官寨",
+          "lat": 31.86852,
+          "lon": 102.29182
+        }
+      ]
+    },
+    "长坪沟": {
+      "lat": 31.00052,
+      "lon": 102.84357,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "长坪沟售票处"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "长坪沟售票处",
+          "lat": 31.00052,
+          "lon": 102.84357
+        }
+      ]
+    },
+    "海子沟": {
+      "lat": 30.99647,
+      "lon": 102.8383,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "海子沟门票站"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "海子沟门票站",
+          "lat": 30.99647,
+          "lon": 102.8383
+        }
+      ]
+    },
+    "卧龙": {
+      "lat": 31.4432,
+      "lon": 104.315,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "卧龙",
+          "lat": 31.4432,
+          "lon": 104.315
+        }
+      ]
+    },
+    "映秀": {
+      "lat": 31.06386,
+      "lon": 103.49266,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "映秀",
+          "lat": 31.06386,
+          "lon": 103.49266
+        }
+      ]
+    },
+    "汶川": {
+      "lat": 31.45523,
+      "lon": 103.55559,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "汶川",
+          "lat": 31.45523,
+          "lon": 103.55559
+        }
+      ]
+    },
+    "理县": {
+      "lat": 31.43853,
+      "lon": 103.16549,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "理县",
+          "lat": 31.43853,
+          "lon": 103.16549
+        }
+      ]
+    },
+    "毕棚沟": {
+      "lat": 31.32273,
+      "lon": 102.95292,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "毕棚沟冰雪娱乐场"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "毕棚沟冰雪娱乐场",
+          "lat": 31.32273,
+          "lon": 102.95292
+        }
+      ]
+    },
+    "古尔沟": {
+      "lat": 31.49959,
+      "lon": 102.97661,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "古尔沟镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "古尔沟镇",
+          "lat": 31.49959,
+          "lon": 102.97661
+        }
+      ]
+    },
+    "鹧鸪山": {
+      "lat": 31.86733,
+      "lon": 102.67881,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "鹧鸪山",
+          "lat": 31.86733,
+          "lon": 102.67881
+        }
+      ]
+    },
+    "黑水": {
+      "lat": 32.06505,
+      "lon": 102.98758,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "黑水县 ཁྲོ་ཆུ།"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "黑水县 ཁྲོ་ཆུ།",
+          "lat": 32.06505,
+          "lon": 102.98758
+        }
+      ]
+    },
+    "松潘": {
+      "lat": 32.59884,
+      "lon": 103.60438,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "松潘",
+          "lat": 32.59884,
+          "lon": 103.60438
+        }
+      ]
+    },
+    "川主寺": {
+      "lat": 32.77954,
+      "lon": 103.61769,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "川主寺",
+          "lat": 32.77954,
+          "lon": 103.61769
+        }
+      ]
+    },
+    "若尔盖": {
+      "lat": 33.59627,
+      "lon": 103.01469,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "若尔盖",
+          "lat": 33.59627,
+          "lon": 103.01469
+        }
+      ]
+    },
+    "花湖": {
+      "lat": 33.92161,
+      "lon": 102.82502,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "若尔盖花湖"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "若尔盖花湖",
+          "lat": 33.92161,
+          "lon": 102.82502
+        }
+      ]
+    },
+    "黄河九曲第一湾": {
+      "lat": 33.47921,
+      "lon": 102.46994,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "黄河九曲第一湾",
+          "lat": 33.47921,
+          "lon": 102.46994
+        }
+      ]
+    },
+    "唐克": {
+      "lat": 33.45126,
+      "lon": 102.4865,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "唐克古城城址"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "唐克古城城址",
+          "lat": 33.45126,
+          "lon": 102.4865
+        }
+      ]
+    },
+    "郎木寺": {
+      "lat": 34.08826,
+      "lon": 102.64371,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "郎木寺",
+          "lat": 34.08826,
+          "lon": 102.64371
+        },
+        {
+          "name": "郎木寺",
+          "lat": 34.08826,
+          "lon": 102.64371
+        },
+        {
+          "name": "郎木寺",
+          "lat": 34.08826,
+          "lon": 102.64371
+        }
+      ]
+    },
+    "红原": {
+      "lat": 33.10582,
+      "lon": 103.31443,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "红原",
+          "lat": 33.10582,
+          "lon": 103.31443
+        }
+      ]
+    },
+    "月亮湾": {
+      "lat": 31.01093,
+      "lon": 103.6158,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "月亮湾站"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "月亮湾站",
+          "lat": 31.01093,
+          "lon": 103.6158
+        }
+      ]
+    },
+    "阿坝县": {
+      "lat": 32.90577,
+      "lon": 101.70233,
+      "confidence": "medium",
+      "corridor": "川西",
+      "alias": [
+        "阿坝县 རྔ་བ།"
+      ],
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "阿坝县 རྔ་བ།",
+          "lat": 32.90577,
+          "lon": 101.70233
+        }
+      ]
+    },
+    "莲宝叶则": {
+      "lat": 32.97821,
+      "lon": 101.58469,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "莲宝叶则",
+          "lat": 32.97821,
+          "lon": 101.58469
+        }
+      ]
+    },
+    "壤塘": {
+      "lat": 32.346,
+      "lon": 101.18451,
+      "confidence": "medium",
+      "corridor": "川西",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "壤塘",
+          "lat": 32.346,
+          "lon": 101.18451
+        }
+      ]
+    },
+    "金川": {
+      "lat": 31.47824,
+      "lon": 102.06324,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "金川镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "金川镇",
+          "lat": 31.47824,
+          "lon": 102.06324
+        }
+      ]
+    },
+    "观音桥": {
+      "lat": 31.80191,
+      "lon": 101.65528,
+      "confidence": "low",
+      "corridor": "川西",
+      "alias": [
+        "观音桥镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "观音桥镇",
+          "lat": 31.80191,
+          "lon": 101.65528
+        }
+      ]
+    },
+    "拉卜楞寺": {
+      "lat": 35.19391,
+      "lon": 102.50704,
+      "confidence": "high",
+      "corridor": "青甘",
+      "alias": [
+        "བླ་བྲང་བཀྲ་ཤིས་འཁྱིལ་"
+      ],
+      "other_candidates": [
+        {
+          "name": "བླ་བྲང་བཀྲ་ཤིས་འཁྱིལ་ 拉卜楞寺",
+          "lat": 35.19391,
+          "lon": 102.50704
+        }
+      ]
+    },
+    "夏河": {
+      "lat": 35.19011,
+      "lon": 102.61366,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "夏河",
+          "lat": 35.19011,
+          "lon": 102.61366
+        }
+      ]
+    },
+    "桑科草原": {
+      "lat": 35.13571,
+      "lon": 102.45873,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "桑科草原",
+          "lat": 35.13571,
+          "lon": 102.45873
+        }
+      ]
+    },
+    "玛曲": {
+      "lat": 34.92921,
+      "lon": 98.48865,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "坎郎玛曲"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "坎郎玛曲",
+          "lat": 34.92921,
+          "lon": 98.48865
+        }
+      ]
+    },
+    "迭部": {
+      "lat": 34.23989,
+      "lon": 103.18871,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "迭部",
+          "lat": 34.23989,
+          "lon": 103.18871
+        }
+      ]
+    },
+    "宕昌": {
+      "lat": 34.04874,
+      "lon": 104.39009,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "宕昌县"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "宕昌县",
+          "lat": 34.04874,
+          "lon": 104.39009
+        }
+      ]
+    },
+    "官鹅沟": {
+      "lat": 34.00106,
+      "lon": 104.45642,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "官鹅沟",
+          "lat": 34.00106,
+          "lon": 104.45642
+        }
+      ]
+    },
+    "定西": {
+      "lat": 35.59269,
+      "lon": 104.62259,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "定西",
+          "lat": 35.59269,
+          "lon": 104.62259
+        }
+      ]
+    },
+    "天水": {
+      "lat": 34.5671,
+      "lon": 105.89492,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "天水",
+          "lat": 34.5671,
+          "lon": 105.89492
+        }
+      ]
+    },
+    "麦积山": {
+      "lat": 34.30454,
+      "lon": 106.04335,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "麦积山",
+          "lat": 34.30454,
+          "lon": 106.04335
+        }
+      ]
+    },
+    "月亮湖": {
+      "lat": 42.34858,
+      "lon": 117.384,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "月亮湖",
+          "lat": 42.34858,
+          "lon": 117.384
+        }
+      ]
+    },
+    "天鹅湖": {
+      "lat": 40.6895,
+      "lon": 108.35512,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "天鹅湖",
+          "lat": 40.6895,
+          "lon": 108.35512
+        }
+      ]
+    },
+    "银川": {
+      "lat": 38.4352,
+      "lon": 106.3107,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "银川",
+          "lat": 38.4352,
+          "lon": 106.3107
+        }
+      ]
+    },
+    "乌兰布统": {
+      "lat": 42.58944,
+      "lon": 117.06241,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "乌兰布统",
+          "lat": 42.58944,
+          "lon": 117.06241
+        }
+      ]
+    },
+    "克什克腾": {
+      "lat": 43.25948,
+      "lon": 117.53768,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "克什克腾旗 ᠬᠡᠰᠢᠭᠲᠡᠨ"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "克什克腾旗 ᠬᠡᠰᠢᠭᠲᠡᠨ",
+          "lat": 43.25948,
+          "lon": 117.53768
+        }
+      ]
+    },
+    "阿斯哈图石林": {
+      "lat": 43.95373,
+      "lon": 117.51564,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "克什克腾世界地质公园阿斯哈图石林园区"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "克什克腾世界地质公园阿斯哈图石林园区",
+          "lat": 43.95373,
+          "lon": 117.51564
+        }
+      ]
+    },
+    "锡林浩特": {
+      "lat": 43.91715,
+      "lon": 116.02091,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "锡林浩特",
+          "lat": 43.91715,
+          "lon": 116.02091
+        }
+      ]
+    },
+    "西乌珠穆沁": {
+      "lat": 44.58086,
+      "lon": 117.61019,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "西乌珠穆沁旗 ᠪᠠᠷᠠᠭᠤᠨ ᠦᠵᠦᠮᠦᠴᠢ"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "西乌珠穆沁旗 ᠪᠠᠷᠠᠭᠤᠨ ᠦᠵᠦᠮᠦᠴᠢᠨ",
+          "lat": 44.58086,
+          "lon": 117.61019
+        }
+      ]
+    },
+    "东乌珠穆沁": {
+      "lat": 45.50702,
+      "lon": 116.96021,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "东乌珠穆沁旗 ᠵᠡᠭᠦᠨ ᠦᠵᠦᠮᠦᠴᠢᠨ"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "东乌珠穆沁旗 ᠵᠡᠭᠦᠨ ᠦᠵᠦᠮᠦᠴᠢᠨ",
+          "lat": 45.50702,
+          "lon": 116.96021
+        }
+      ]
+    },
+    "乌拉盖": {
+      "lat": 45.72569,
+      "lon": 118.88134,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "乌拉盖雷达站"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "乌拉盖雷达站",
+          "lat": 45.72569,
+          "lon": 118.88134
+        }
+      ]
+    },
+    "二连浩特": {
+      "lat": 43.64078,
+      "lon": 111.94352,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "二连浩特市 ᠡᠷᠢᠶᠡᠡ ᠬᠣᠲᠠ"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "二连浩特市 ᠡᠷᠢᠶᠡᠡ ᠬᠣᠲᠠ",
+          "lat": 43.64078,
+          "lon": 111.94352
+        }
+      ]
+    },
+    "多伦": {
+      "lat": 42.13941,
+      "lon": 116.46084,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "多伦",
+          "lat": 42.13941,
+          "lon": 116.46084
+        }
+      ]
+    },
+    "太仆寺旗": {
+      "lat": 41.82537,
+      "lon": 115.6231,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "太仆寺旗",
+          "lat": 41.82537,
+          "lon": 115.6231
+        }
+      ]
+    },
+    "正蓝旗": {
+      "lat": 39.9917,
+      "lon": 116.31885,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "正蓝旗",
+          "lat": 39.9917,
+          "lon": 116.31885
+        }
+      ]
+    },
+    "元上都遗址": {
+      "lat": 42.33387,
+      "lon": 116.1883,
+      "confidence": "high",
+      "corridor": "内蒙",
+      "other_candidates": [
+        {
+          "name": "元上都遗址",
+          "lat": 42.33387,
+          "lon": 116.1883
+        }
+      ]
+    },
+    "呼和浩特": {
+      "lat": 40.83043,
+      "lon": 111.65872,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "呼和浩特",
+          "lat": 40.83043,
+          "lon": 111.65872
+        }
+      ]
+    },
+    "大召寺": {
+      "lat": 40.79873,
+      "lon": 111.64702,
+      "confidence": "high",
+      "corridor": "内蒙",
+      "other_candidates": [
+        {
+          "name": "大召寺",
+          "lat": 40.79873,
+          "lon": 111.64702
+        }
+      ]
+    },
+    "包头": {
+      "lat": 40.70729,
+      "lon": 109.84983,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "包头",
+          "lat": 40.70729,
+          "lon": 109.84983
+        }
+      ]
+    },
+    "五当召": {
+      "lat": 40.78196,
+      "lon": 110.31211,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "alias": [
+        "五当召镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "五当召镇",
+          "lat": 40.78196,
+          "lon": 110.31211
+        }
+      ]
+    },
+    "响沙湾": {
+      "lat": 40.16004,
+      "lon": 109.92339,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "响沙湾",
+          "lat": 40.16004,
+          "lon": 109.92339
+        }
+      ]
+    },
+    "鄂尔多斯": {
+      "lat": 39.56002,
+      "lon": 109.83697,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "鄂尔多斯",
+          "lat": 39.56002,
+          "lon": 109.83697
+        }
+      ]
+    },
+    "成吉思汗陵": {
+      "lat": 39.37124,
+      "lon": 109.77907,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "成吉思汗陵",
+          "lat": 39.37124,
+          "lon": 109.77907
+        }
+      ]
+    },
+    "七星湖": {
+      "lat": 36.63708,
+      "lon": 117.01223,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "七星湖",
+          "lat": 36.63708,
+          "lon": 117.01223
+        }
+      ]
+    },
+    "康巴什": {
+      "lat": 39.67164,
+      "lon": 109.84755,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "康巴什",
+          "lat": 39.67164,
+          "lon": 109.84755
+        }
+      ]
+    },
+    "当金山": {
+      "lat": 39.18924,
+      "lon": 94.30566,
+      "confidence": "medium",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "扁都口": {
+      "lat": 38.23998,
+      "lon": 100.94271,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "扁都口",
+          "lat": 38.23998,
+          "lon": 100.94271
+        },
+        {
+          "name": "扁都口",
+          "lat": 38.23998,
+          "lon": 100.94271
+        }
+      ]
+    },
+    "卓尔山": {
+      "lat": 38.18153,
+      "lon": 100.26601,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "卓尔山",
+          "lat": 38.18153,
+          "lon": 100.26601
+        },
+        {
+          "name": "卓尔山",
+          "lat": 38.18153,
+          "lon": 100.26601
+        }
+      ]
+    },
+    "祁连": {
+      "lat": 39.20276,
+      "lon": 98.54309,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "祁连山"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "祁连山",
+          "lat": 39.20276,
+          "lon": 98.54309
+        },
+        {
+          "name": "祁连山",
+          "lat": 39.20276,
+          "lon": 98.54309
+        }
+      ]
+    },
+    "达坂山": {
+      "lat": 37.37899,
+      "lon": 101.41167,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "达坂山观景台"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "达坂山观景台",
+          "lat": 37.37899,
+          "lon": 101.41167
+        },
+        {
+          "name": "达坂山观景台",
+          "lat": 37.37899,
+          "lon": 101.41167
+        }
+      ]
+    },
+    "扎陵湖": {
+      "lat": 35.08611,
+      "lon": 97.9109,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "扎陵湖乡"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "扎陵湖乡",
+          "lat": 35.08611,
+          "lon": 97.9109
+        }
+      ]
+    },
+    "年保玉则": {
+      "lat": 33.42155,
+      "lon": 101.08147,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "年保玉则景区大门"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "年保玉则景区大门",
+          "lat": 33.42155,
+          "lon": 101.08147
+        }
+      ]
+    },
+    "久治": {
+      "lat": 33.43089,
+      "lon": 101.48059,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "久治县 གཅིག་སྒྲིལ།"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "久治县 གཅིག་སྒྲིལ།",
+          "lat": 33.43089,
+          "lon": 101.48059
+        }
+      ]
+    },
+    "坎布拉": {
+      "lat": 36.11371,
+      "lon": 101.8491,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "坎布拉镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "坎布拉镇",
+          "lat": 36.11371,
+          "lon": 101.8491
+        }
+      ]
+    },
+    "贵德": {
+      "lat": 36.04615,
+      "lon": 101.42967,
+      "confidence": "low",
+      "corridor": "青甘",
+      "alias": [
+        "贵德县"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "贵德县",
+          "lat": 36.04615,
+          "lon": 101.42967
+        }
+      ]
+    },
+    "龙羊峡": {
+      "lat": 36.35695,
+      "lon": 100.81377,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "龙羊峡",
+          "lat": 36.35695,
+          "lon": 100.81377
+        }
+      ]
+    },
+    "共和": {
+      "lat": 39.00542,
+      "lon": 103.71845,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "共和",
+          "lat": 39.00542,
+          "lon": 103.71845
+        }
+      ]
+    },
+    "拉脊山": {
+      "lat": 36.26098,
+      "lon": 102.01941,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "拉脊山",
+          "lat": 36.26098,
+          "lon": 102.01941
+        }
+      ]
+    },
+    "祁连山": {
+      "lat": 39.20276,
+      "lon": 98.54309,
+      "confidence": "medium",
+      "corridor": "青甘",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验",
+      "other_candidates": [
+        {
+          "name": "祁连山",
+          "lat": 39.20276,
+          "lon": 98.54309
+        }
+      ]
+    },
+    "察隅": {
+      "lat": 29.01756,
+      "lon": 97.39621,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "八宿": {
+      "lat": 30.0562,
+      "lon": 96.9174,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "八宿县 དཔའ་ཤོད་རྫོང་།"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "邦达": {
+      "lat": 30.24604,
+      "lon": 97.27346,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "左贡": {
+      "lat": 28.46545,
+      "lon": 99.23829,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "芒康": {
+      "lat": 29.68301,
+      "lon": 98.59508,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "芒康县 སྨར་ཁམས་རྫོང་།"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "昌都": {
+      "lat": 30.96936,
+      "lon": 97.35655,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "强巴林寺": {
+      "lat": 29.23586,
+      "lon": 91.34132,
+      "confidence": "high",
+      "corridor": "西藏",
+      "alias": [
+        "གྲ་བྱམས་པ་གླིང་། 强巴林寺"
+      ]
+    },
+    "类乌齐": {
+      "lat": 31.37096,
+      "lon": 96.50459,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "类乌齐镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "丁青": {
+      "lat": 31.41629,
+      "lon": 95.59336,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "丁青镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "孜珠寺": {
+      "lat": 31.24183,
+      "lon": 95.85896,
+      "confidence": "high",
+      "corridor": "西藏"
+    },
+    "业拉山": {
+      "lat": 30.17161,
+      "lon": 97.31685,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "东达山": {
+      "lat": 29.7302,
+      "lon": 97.98843,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "然乌镇": {
+      "lat": 29.50557,
+      "lon": 96.75092,
+      "confidence": "high",
+      "corridor": "西藏"
+    },
+    "工布江达": {
+      "lat": 29.88241,
+      "lon": 93.28099,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "那曲": {
+      "lat": 31.44545,
+      "lon": 91.98947,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "安多": {
+      "lat": 32.25228,
+      "lon": 91.66583,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "唐古拉山口": {
+      "lat": 32.88262,
+      "lon": 91.91843,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "圣象天门": {
+      "lat": 30.82654,
+      "lon": 90.50167,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "圣象天门观景台"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "班戈": {
+      "lat": 31.39467,
+      "lon": 90.00768,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "班戈县 དཔལ་མགོན་རྫོང་།"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "色林错": {
+      "lat": 31.6962,
+      "lon": 88.69766,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "双湖": {
+      "lat": 34.87598,
+      "lon": 89.33549,
+      "confidence": "low",
+      "alias": [
+        "安多双湖线"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "尼玛": {
+      "lat": 33.67623,
+      "lon": 78.84517,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "尼玛垄"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "文布南村": {
+      "lat": 31.34249,
+      "lon": 86.75565,
+      "confidence": "high",
+      "corridor": "西藏"
+    },
+    "当惹雍错": {
+      "lat": 31.1067,
+      "lon": 86.59113,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "当惹雍错观景点"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "改则": {
+      "lat": 32.30519,
+      "lon": 84.05586,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "改则镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "狮泉河": {
+      "lat": 32.49508,
+      "lon": 80.10042,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "狮泉河镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "阿里": {
+      "lat": 32.4794,
+      "lon": 80.07168,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "玛旁雍错": {
+      "lat": 30.72045,
+      "lon": 81.35857,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "玛旁雍错湿地国家级自然保护区"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "札达": {
+      "lat": 31.57226,
+      "lon": 79.88238,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "札达土林观景台"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "托林寺": {
+      "lat": 31.47548,
+      "lon": 79.7953,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "托林寺遗址"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "科迦寺": {
+      "lat": 30.19554,
+      "lon": 81.26785,
+      "confidence": "high",
+      "corridor": "西藏"
+    },
+    "班公错": {
+      "lat": 33.46153,
+      "lon": 79.89958,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "日土": {
+      "lat": 33.37093,
+      "lon": 79.73046,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "盐湖": {
+      "lat": 32.52887,
+      "lon": 82.45853,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "盐湖乡"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "措勤": {
+      "lat": 30.89358,
+      "lon": 85.35308,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "扎日南木错": {
+      "lat": 31.03495,
+      "lon": 85.63409,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "扎日南木错观景台"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "萨嘎": {
+      "lat": 29.02454,
+      "lon": 89.21054,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "萨嘎村"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "仲巴": {
+      "lat": 29.72261,
+      "lon": 84.04259,
+      "confidence": "medium",
+      "corridor": "西藏",
+      "note": "OSM 候选置信度 medium，交付前建议在图上核验"
+    },
+    "帕羊": {
+      "lat": 30.04115,
+      "lon": 83.46897,
+      "confidence": "low",
+      "corridor": "西藏",
+      "alias": [
+        "帕羊镇"
+      ],
+      "note": "OSM 候选置信度 low，交付前建议在图上核验"
+    },
+    "希夏邦马峰": {
+      "lat": 28.35176,
+      "lon": 85.78207,
+      "confidence": "high",
+      "corridor": "西藏"
+    },
+    "莫日格勒河": {
+      "lat": 49.23158,
+      "lon": 119.82305,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "osm": "way/694433918"
+    },
+    "塞罕坝": {
+      "lat": 42.40665,
+      "lon": 117.25164,
+      "confidence": "low",
+      "corridor": "内蒙",
+      "osm": "way/892929900"
+    },
+    "兴安盟": {
+      "lat": 46.24255,
+      "lon": 121.40888,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "osm": "node/6292533221"
+    },
+    "阿尔山天池": {
+      "lat": 47.31707,
+      "lon": 120.40454,
+      "confidence": "medium",
+      "corridor": "内蒙",
+      "osm": "way/1156708032"
     }
   }
 }

@@ -102,3 +102,17 @@ python scripts/add_places.py --apply cand.json     # 人工核对置信度后再
 
 OSM 对中国西部景区的覆盖并不完整：景区常没有独立节点（可可托海就没有），
 这时改用地名/镇名，或接受低置信并标注"需现场确认"。
+
+
+## 三个补充字段（做多走廊覆盖时加的）
+
+| 字段 | 用途 |
+|---|---|
+| `corridor` | 走廊标签（北疆/东疆/伊犁/西藏/川西/青甘/内蒙）。用于覆盖度统计与测试，不参与匹配 |
+| `scope_text` | 原始的"适用范围描述"。当 `place` 被归一化成可匹配的点位键后，原始描述存这里供人看 |
+| `scope` | 值为 `meta` 时表示**走廊级决策说明**：`fetch_constraints` 不挂载、`match_season` 不判定 |
+
+为什么需要 `scope_text`：补库的调研把 `place` 写成了描述（如「冷湖—大柴旦—敦煌（G315 / G215 一带）」），
+而 `place` 在 schema 里是**挂载键**，必须能匹配地名库或出现在 `place_allowlist`。
+合并脚本会把描述里能匹配的点位抽出来放进 `place`，原描述挪到 `scope_text`，
+抽不出来的就得补地名库或显式加进 allowlist —— 这条规则由 `validate_constraints.py` 强制。

@@ -35,18 +35,18 @@ import match_season as MS                                             # noqa: E4
 TRIP = {
     "trip": {"title": "测试行程", "subtitle": "共 {{days}} 天 ｜ 自驾约 {{total_km}} km",
              "facts": ["{{stops}} 个点位"], "notes": ["**注意**：这是测试"]},
-    "days": [{"id": "D1", "date": "2026-04-01", "route": "A → B", "km_text": "约 {{day_km}} km",
+    "days": [{"id": "D1", "date": "2026-04-01", "route": "起点城 → 中途镇", "km_text": "约 {{day_km}} km",
               "tip": "**必看**：提前预约", "color": "#c8363a"},
-             {"id": "D2", "date": "2026-04-02", "route": "B → C", "km_text": "约 {{day_km}} km",
+             {"id": "D2", "date": "2026-04-02", "route": "中途镇 → 终点镇", "km_text": "约 {{day_km}} km",
               "tip": "普通提示", "color": "#267ca4"}],
-    "stops": [{"n": 1, "name": "A", "lat": 43.8, "lon": 87.6, "day": "D1"},
-              {"n": 2, "name": "B", "lat": 44.0, "lon": 88.0, "day": "D1"},
-              {"n": 3, "name": "C", "lat": 44.2, "lon": 88.4, "day": "D2"}],
-    "legs": [{"from": "A", "to": "B", "day": "D1", "km": 40.0, "hours": 0.8, "km_source": "road",
+    "stops": [{"n": 1, "name": "起点城", "lat": 43.8, "lon": 87.6, "day": "D1"},
+              {"n": 2, "name": "中途镇", "lat": 44.0, "lon": 88.0, "day": "D1"},
+              {"n": 3, "name": "终点镇", "lat": 44.2, "lon": 88.4, "day": "D2"}],
+    "legs": [{"from": "起点城", "to": "中途镇", "day": "D1", "km": 40.0, "hours": 0.8, "km_source": "road",
               "geometry": [[43.8, 87.6], [43.9, 87.8], [44.0, 88.0]]},
-             {"from": "B", "to": "C", "day": "D2", "km": 60.0, "hours": 1.0, "km_source": "road",
+             {"from": "中途镇", "to": "终点镇", "day": "D2", "km": 60.0, "hours": 1.0, "km_source": "road",
               "geometry": [[44.0, 88.0], [44.1, 88.2], [44.2, 88.4]]},
-             {"from": "B", "to": "A", "day": "D2", "km": 40.0, "hours": 0.8, "km_source": "road",
+             {"from": "中途镇", "to": "起点城", "day": "D2", "km": 40.0, "hours": 0.8, "km_source": "road",
               "counts_toward_total": False,
               "geometry": [[44.0, 88.0], [43.9, 87.8], [43.8, 87.6]]}],
     "booking_actions": [{"kind": "new", "label": "必约", "detail": "提前 3 天"}],
@@ -204,7 +204,7 @@ class TestSeasonWindows(unittest.TestCase):
 
     def test_no_data_not_flagged(self):
         """城市/桥梁这类本来就没有观赏窗口，不能报成问题。"""
-        rows = MS.analyze(TRIP)                                    # A/B/C 都不在库里
+        rows = MS.analyze(TRIP)                                    # 起点城/中途镇/终点镇 都不在库里
         self.assertTrue(all(not r["has_window"] for r in rows))
         self.assertTrue(all(r["status"] == "no-data" for r in rows))
 

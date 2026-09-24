@@ -67,7 +67,7 @@ metadata:
 ```bash
 # 0) 环境（零依赖，Python 标准库即可）
 ls scripts/
-python tests/test_normalize.py        # 可选：确认输入解析层正常（10 项断言）
+python tests/run_all.py               # 可选：全部回归测试（输入/渲染/季节/覆盖度）
 
 # 1) 行程表 → Trip Schema 骨架（xlsx / csv / md / txt / 聊天记录都行）
 python scripts/parse_itinerary.py 用户的行程.xlsx -o trip.json --start 2026-09-25
@@ -158,7 +158,15 @@ export ITINERARY_CONSTRAINTS_URL=https://raw.githubusercontent.com/<owner>/<repo
 
 ## 已知边界
 
-- 内置地名库目前覆盖**新疆北疆环线**为主的点位；其他地区需先补 `data/places.json`，
-  否则 `fetch_routes.py` 会报"地名未解析"（这是设计如此，不是故障）。
+**覆盖范围**（点位 / 约束）：新疆北疆环线、东疆（乌市·天池·吐鲁番）、伊犁河谷、
+西藏、川西（甘孜·阿坝）、青甘（青海 + 甘肃河西与甘南）、内蒙古（呼伦贝尔·阿尔山·阿拉善·锡林郭勒）。
+库外地区需先补 `data/places.json`（用 `add_places.py`），否则 `fetch_routes.py` 会报
+"地名未解析"——这是设计如此，不是故障。
+
+其他限制：
 - 中国西部 OSM 路网不完整，缺路时会退化为直线并标注——**必须人工核对里程**。
-- 约束库是种子集，不是全量；遇到库外地区要现查现补，并把结果沉淀回去。
+- 藏区湖泊在 OSM 里命名混乱（「纳木错」在 OSM 里叫「纳木湖」、羊卓雍措查不到），
+  脚本已做 措/错/湖 变体，但仍会有查不到的，属正常。
+- 约束库是**种子集而非全量**，且时效性强：每条都带 `verified_at`，超过 60 天会在输出里
+  降级为「待核实」。遇到库外地区要现查现补，并把结果沉淀回去。
+- 覆盖度由 `tests/test_coverage.py` 守住（每条走廊设了点位/约束下限），改数据后请跑一遍。

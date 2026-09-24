@@ -52,9 +52,14 @@ def place_keys(places):
 
 
 def unmatched_tokens(place, keys):
-    """把 place 按 / 和 、 拆开，返回匹配不到地名库的片段（与 fetch_constraints 同口径）。"""
+    """把 place 按 / 和 、 拆开，返回匹配不到地名库的片段（与 fetch_constraints 同口径）。
+
+    先剥掉括号内容：「西藏全境（重点：阿里、羌塘）」应看成「西藏全境」+「阿里」，
+    而不是一个整体去匹配。
+    """
     bad = []
-    for tok in re.split(r"[/、]", str(place or "")):
+    cleaned = re.sub(r'[（(【\[][^）)】\]]*[）)】\]]', "", str(place or ""))
+    for tok in re.split(r"[/、·・\s]+", cleaned):
         t = tok.strip().lower()
         if not t:
             continue
@@ -109,7 +114,10 @@ def main():
         seen[cid] = i + 1
         if not c.get("impact"):
             warnings.append("%s：建议补 impact（体检报告里最值钱的一栏）" % cid)
-        bad = unmatched_tokens(c.get("place"), keys)
+        place_str = str(c.get("place") or "")
+        if place_str.strip().lower() in allow:      # 整串显式声明过（如「中俄、中蒙边境全线」）
+            continue
+        bad = unmatched_tokens(place_str, keys)
         if bad and not any(b.lower() in allow for b in bad):
             errors.append("%s：place 里的 %s 既不在 places.json、也不在 meta.place_allowlist —— "
                           "这种约束在真实行程里可能一条都挂不上" % (cid, "、".join(bad)))

@@ -11,9 +11,11 @@ render_report.py — Trip Schema → Markdown 报告（退改决策表 / 避坑�
 """
 import argparse
 import datetime as dt
-import json
 import os
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _schema import load_trip, resolve_placeholders, audit     # noqa: E402
 
 LEVEL_LABEL = {"hard": "硬约束", "stale": "待核实（数据已过期）", "soft": "参考"}
 LEVEL_ORDER = ["hard", "stale", "soft"]
@@ -26,8 +28,10 @@ def main():
     ap.add_argument("-o", "--out", default="行程报告.md")
     args = ap.parse_args()
 
-    with open(args.trip, encoding="utf-8") as f:
-        trip = json.load(f)
+    trip = load_trip(args.trip)
+    resolve_placeholders(trip)
+    for msg in audit(trip):
+        print("  ! " + msg, file=sys.stderr)
     t = trip.get("trip", {})
     days = trip.get("days", [])
     L = []
@@ -112,6 +116,10 @@ def main():
             A("- **其中 %d 条已超过 %d 天时效，标记为待核实**"
               % (cm["stale"], cm.get("stale_after_days", 60)))
     unverified = [l for l in trip.get("legs", []) if l.get("km_source") not in ("road", None)]
+    excluded = [l for l in trip.get("legs", []) if l.get("counts_toward_total") is False]
+    if excluded:
+        A("- 有 %d 段未计入总里程（区间车 / 备选路线）：%s"
+          % (len(excluded), "、".join("%s→%s" % (l.get("from"), l.get("to")) for l in excluded[:5])))
     if unverified:
         A("- **以下路段里程未经真实路网核实**（渲染图里也会标注）：")
         for l in unverified:

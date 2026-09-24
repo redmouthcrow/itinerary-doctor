@@ -22,6 +22,8 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.join(HERE, os.pardir, "assets")
+sys.path.insert(0, HERE)
+from _schema import (load_trip, resolve_placeholders, to_html, audit)  # noqa: E402
 
 DEFAULT_THEME = {
     "bg": "#faf9f6", "ink": "#1f2029", "accent": "#b25c3c",
@@ -32,19 +34,6 @@ DEFAULT_THEME = {
 
 
 # ---------------------------------------------------------------- 载入
-def load_trip(path):
-    """原生支持 JSON；装了 PyYAML 时也支持 YAML（JSON 本身是 YAML 子集）。"""
-    with open(path, encoding="utf-8") as f:
-        text = f.read()
-    if path.lower().endswith(".json") or text.lstrip()[:1] in "{[":
-        return json.loads(text)
-    try:
-        import yaml  # type: ignore
-    except ImportError:
-        sys.exit("需要 PyYAML 才能读 .yaml —— 请改用 .json，或 pip install pyyaml")
-    return yaml.safe_load(text)
-
-
 def asset(name):
     p = os.path.join(ASSETS, name)
     if not os.path.exists(p):
@@ -102,7 +91,7 @@ def build_payload(trip, offset_m_default):
             "n": s.get("n"), "name": s.get("name"),
             "lat": round(la, 5), "lon": round(lo, 5),
             "color": s.get("color") or day_color.get(s.get("day"), "#666"),
-            "popup": s.get("popup") or "",
+            "popup": to_html(s.get("popup") or ""),
             "size": s.get("size", "big"),
         })
 
@@ -111,7 +100,7 @@ def build_payload(trip, offset_m_default):
         "km": d.get("km_text") or d.get("km") or "—",
         "lodging": d.get("lodging") or "—",
         "action": d.get("lodging_action") or "",
-        "tip": d.get("tip") or "",
+        "tip": to_html(d.get("tip") or ""),
         "color": day_color.get(d.get("id"), "#8c8c96"),
     } for d in trip.get("days", [])]
 
@@ -306,7 +295,7 @@ def render(trip, offset_m_default):
         '<div class="bk" style="border-left-color:%s"><b>%s</b><span>%s</span></div>'
         % (bc.get(b.get("kind"), "#999"), b.get("label", ""), b.get("detail", ""))
         for b in p["booking_actions"])
-    facts_html = "".join('<span class="fact">%s</span>' % f for f in t.get("facts", []))
+    facts_html = "".join('<span class="fact">%s</span>' % to_html(f) for f in t.get("facts", []))
     notes = t.get("notes", [])
     html = (HTML_TEMPLATE
             .replace("__LEAFLET_CSS__", asset("leaflet.css").replace(
@@ -314,7 +303,7 @@ def render(trip, offset_m_default):
             .replace("__LEAFLET_JS__", asset("leaflet.js"))
             .replace("__TITLE__", t.get("title", "路线图"))
             .replace("__H1__", t.get("title", "路线图"))
-            .replace("__SUBTITLE__", t.get("subtitle", ""))
+            .replace("__SUBTITLE__", to_html(t.get("subtitle", "")))
             .replace("__FOOTNOTE__", t.get("footnote",
                      "底图：高德地图（GCJ-02）。路线几何来自 OpenStreetMap 路网，里程为纯驾驶里程。"
                      "政策与开放时间以景区当日公告为准。"))
@@ -322,7 +311,7 @@ def render(trip, offset_m_default):
             .replace("__INK__", theme["ink"]).replace("__BG__", theme["bg"])
             .replace("__ACCENT__", theme["accent"]).replace("__SW__", theme["sidebar_width"])
             .replace("__FACTS__", facts_html).replace("__BOOKING__", booking_html)
-            .replace("__NOTES__", json.dumps(notes, ensure_ascii=False))
+            .replace("__NOTES__", json.dumps([to_html(x) for x in notes], ensure_ascii=False))
             .replace("__DEFAULT_BASE__", "'%s'" % p["default_base"])
             .replace("__LEGS__", json.dumps(p["legs"], ensure_ascii=False))
             .replace("__STOPS__", json.dumps(p["stops"], ensure_ascii=False))
@@ -341,6 +330,9 @@ def main():
     args = ap.parse_args()
 
     trip = load_trip(args.trip)
+    resolve_placeholders(trip)
+    for msg in audit(trip):
+        print("  ! " + msg, file=sys.stderr)
     html, payload = render(trip, args.offset_m)
     with open(args.out, "w", encoding="utf-8") as f:
         f.write(html)

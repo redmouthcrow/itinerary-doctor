@@ -21,6 +21,7 @@ import urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _geo import (wgs84_to_gcj02, offset_polyline, decimate,  # noqa: E402
                   polyline_length_km, bbox_of, lonlat_to_merc)
+from _schema import load_trip, resolve_placeholders, strip_md, audit  # noqa: E402
 
 TILE = 256
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -194,8 +195,10 @@ def main():
         return 0
     from PIL import Image, ImageDraw
 
-    with open(args.trip, encoding="utf-8") as f:
-        trip = json.load(f)
+    trip = load_trip(args.trip)
+    resolve_placeholders(trip)
+    for msg in audit(trip):
+        print("  ! " + msg, file=sys.stderr)
 
     legs = [l for l in trip.get("legs", []) if l.get("geometry")]
     stops = [s for s in trip.get("stops", []) if s.get("lat") is not None]
@@ -295,8 +298,9 @@ def main():
         d.rounded_rectangle([M, ty + 4, M + 84, ty + 40], radius=9, fill=c)
         d.text((M + 15, ty + 9), str(day.get("id", "")), font=font(24, True), fill=(255, 255, 255))
         d.text((M + 100, ty + 9), str(day.get("date", ""))[:16], font=font(25, True), fill=(60, 60, 72))
-        d.text((M + cw[0] + 100, ty + 9), str(day.get("route", ""))[:46], font=font(24), fill=(45, 45, 58))
-        d.text((M + cw[0] + cw[1], ty + 9), str(day.get("km_text") or day.get("km") or "—"),
+        d.text((M + cw[0] + 100, ty + 9), strip_md(str(day.get("route", "")))[:46],
+               font=font(24), fill=(45, 45, 58))
+        d.text((M + cw[0] + cw[1], ty + 9), strip_md(str(day.get("km_text") or day.get("km") or "—"))[:18],
                font=font(24), fill=(45, 45, 58))
         d.text((M + cw[0] + cw[1] + cw[2], ty + 9), str(day.get("lodging") or "—"),
                font=font(24), fill=(45, 45, 58))

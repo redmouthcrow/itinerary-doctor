@@ -81,8 +81,15 @@ python scripts/render_poster.py    trip.json -o 路线图.png     # 可选，需
 **截图与 PDF 不能自动处理**（不做 OCR），详见 [references/input-formats.md](skills/itinerary-doctor/references/input-formats.md)。
 
 ```bash
-python tests/test_normalize.py     # 6 种真实脏输入 + 10 项断言，锁住这一层
+python tests/run_all.py     # 输入层 10 项 + schema/约束库 13 项，共 23 项断言
 ```
+
+## 数字不手写
+
+trip.json 里凡是里程/天数/点位数都写占位符，渲染时从真实路网现算：
+`{{total_km}}`、`{{day_km}}`、`{{day_km:D3}}`、`{{days}}`、`{{stops}}`。
+区间车与备选路线在数据里标 `"counts_toward_total": false`，总里程自动排除它们。
+（手填估值再回填，是两次真实测试里反复犯的错。）
 
 ---
 
@@ -106,6 +113,9 @@ skills/itinerary-doctor/
 ├── scripts/
 │   ├── normalize_input.py   # 输入归一化：表格 / Day 标题 / 散文三级策略
 │   ├── parse_itinerary.py   # 任意形状行程 → Trip Schema（零依赖读 xlsx）
+│   ├── add_places.py        # 补地名库：查候选 → 人工确认置信度 → 落库
+│   ├── validate_constraints.py  # 约束库自检（防"0 命中"静默失败）
+│   ├── _schema.py           # 占位符回填（里程等数字不手写）+ markdown/HTML 桥
 │   ├── fetch_routes.py      # 真实路网几何与里程（含降级链）
 │   ├── fetch_constraints.py # 约束库三级取数 + 告警挂载
 │   ├── render_html.py       # → 单文件交互地图（零依赖，主交付物）

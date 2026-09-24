@@ -11,7 +11,12 @@
    "12328 / transport bureau",
    "reputable guide (lead only)"
   ],
-  "disclaimer": "Seasonal windows and reservation rules change. Always confirm via the official channel listed in `source` before delivery."
+  "disclaimer": "Seasonal windows and reservation rules change. Always confirm via the official channel listed in `source` before delivery.",
+  "place_allowlist": [
+   "独库公路",
+   "全国"
+  ],
+  "place_allowlist_note": "scope 级地点（公路 / 全国性规则）不进地名库，但要在这里显式声明——校验器会拿它防'0 命中'静默失败"
  },
  "categories": {
   "reservation": "requires advance booking (channel + lead time)",
@@ -63,7 +68,8 @@
    "level": "hard",
    "text": "旺季（5/1—10/15）自驾车辆限量免费预约：每日 200 台（190 台轴距 9 m 以下 + 10 台 9 座以下房车），停车位满载即满额，需改乘白哈巴 1 路车入园。",
    "source": "喀纳斯景区管理委员会公告",
-   "verified_at": "2026-09-11"
+   "verified_at": "2026-09-11",
+   "impact": "没抢到名额就把车停贾登峪改乘区间车（住宿不变），别把行程押在名额上。"
   },
   {
    "id": "baihaba-vehicle-channel",
@@ -82,7 +88,8 @@
    "level": "hard",
    "text": "自驾进入白哈巴只允许从哈巴河县铁热克提游客服务中心方向进入；自驾车辆统一停放白哈巴新村停车场，不得自驾进入喀纳斯核心区。铁热克提方向自驾入园时间 8:00—22:00，贾登峪方向 8:00—18:00。",
    "source": "喀纳斯景区 / 白哈巴景区公告",
-   "verified_at": "2026-09-11"
+   "verified_at": "2026-09-11",
+   "impact": "只能从哈巴河铁热克提方向进，导航别导别的路。"
   },
   {
    "id": "baihaba-visitor-cap",
@@ -91,7 +98,8 @@
    "level": "hard",
    "text": "白哈巴游客每日限流 3500 人；旺季开放 08:00—20:00（20:00 停止入园），淡季（10/16 起）10:00—18:00。",
    "source": "喀纳斯景区承载量公告",
-   "verified_at": "2026-09-11"
+   "verified_at": "2026-09-11",
+   "impact": "旺季 3500 人/天，国庆前后必须提前 3 天以上预约。"
   },
   {
    "id": "baihaba-document",
@@ -110,7 +118,8 @@
    "level": "soft",
    "text": "白哈巴门票 30 元（旺季 5/1—10/15）+ 区间车 45 元（喀纳斯往返，车程约 1 h）。",
    "source": "喀纳斯景区",
-   "verified_at": "2026-09-11"
+   "verified_at": "2026-09-11",
+   "impact": "门票 + 区间车合计 75 元/人；从喀纳斯方向进还得先买喀纳斯票。"
   },
   {
    "id": "kanas-vehicle-ban",
@@ -149,7 +158,8 @@
    "level": "hard",
    "text": "喀纳斯、禾木、白哈巴实行实名制预约购票与分时入园；「喀纳斯景区」公众号 / 原行网 / 智游阿勒泰可约，现场窗口余票极少。节假日建议提前 5—15 天。",
    "source": "喀纳斯景区",
-   "verified_at": "2026-09-11"
+   "verified_at": "2026-09-11",
+   "impact": "现场窗口基本没票，临到跟前再订 = 进不去。"
   },
   {
    "id": "hemu-vehicle-ban",
@@ -158,7 +168,8 @@
    "level": "hard",
    "text": "禾木同样禁止私家车进村，车辆停禾木门票站/游客中心后换乘区间车。禾木门票 50 元 + 区间车。",
    "source": "喀纳斯景区",
-   "verified_at": "2026-09-11"
+   "verified_at": "2026-09-11",
+   "impact": "以为能开车进村会白跑；门票 50 元 + 区间车。"
   },
   {
    "id": "jiadengyu-parking",
@@ -177,7 +188,8 @@
    "level": "hard",
    "text": "自驾入园需在「赛里木湖」公众号预约，每日限量，旺季建议提前 3—7 天。",
    "source": "赛里木湖景区",
-   "verified_at": "2026-09-11"
+   "verified_at": "2026-09-11",
+   "impact": "没预约自驾 = 进不去，只能改乘区间车。"
   },
   {
    "id": "sailimu-price",
@@ -186,7 +198,8 @@
    "level": "soft",
    "text": "旺季（至 10/15）门票 70 元 + 区间车 75 元；自驾套票旺季 145 元/人、淡季 110 元/人；10/16 起门票半价。",
    "source": "赛里木湖景区",
-   "verified_at": "2026-09-11"
+   "verified_at": "2026-09-11",
+   "impact": "4 月是淡季半价（35 元），旺季 70；买自驾套票更划算。"
   },
   {
    "id": "sailimu-nofuel",
@@ -195,7 +208,8 @@
    "level": "hard",
    "text": "景区内无加油站、无充电桩，环湖约 96 km，进湖前必须加满油。",
    "source": "赛里木湖景区指南",
-   "verified_at": "2026-09-11"
+   "verified_at": "2026-09-11",
+   "impact": "进湖前必须加满油——景区内没有加油站、也没有充电桩。"
   },
   {
    "id": "sailimu-season",
@@ -204,7 +218,8 @@
    "level": "soft",
    "text": "9—10 月上旬为秋季错峰窗口：气温约 5—18℃，草原转暖黄、湖水深蓝、人少价低。10 月下旬后夜间常降至 0℃ 以下，环湖偏远路段可能因降雪临时管控。",
    "source": "景区指南 + 气象常识",
-   "verified_at": "2026-09-11"
+   "verified_at": "2026-09-11",
+   "impact": "10 月上旬是错峰好时机（5—18℃、人少价低）；10 月下旬后环湖路段可能因降雪管控。"
   },
   {
    "id": "altay-autumn-window",
@@ -243,7 +258,8 @@
    "level": "soft",
    "text": "新疆区间测速密集；加油站需刷身份证登记；部分路段服务区间隔大（S21 沙漠高速尤甚）。",
    "source": "自驾经验 + 交警提示",
-   "verified_at": "2026-09-11"
+   "verified_at": "2026-09-11",
+   "impact": "按限速走；油量过半就加，部分路段服务区间隔很大。"
   },
   {
    "id": "xjmuseum-closed-monday",

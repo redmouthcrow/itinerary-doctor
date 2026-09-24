@@ -66,3 +66,39 @@ export ITINERARY_CONSTRAINTS_URL=https://raw.githubusercontent.com/<owner>/<repo
 
 取数顺序：**远程 → 本地缓存（`~/.cache/itinerary-doctor/constraints.json`）→ 内置快照**。
 远程失败会打警告但**不会中断流程**，保证离线可用。
+
+
+## 必读：place 必须能匹配到地名库（否则约束等于没写）
+
+东疆那单踩过：把约束的 `place` 写成 `吐鲁番`，而行程里只写点位名（交河故城/火焰山），
+结果 `fetch_constraints` **一条都没挂上**，输出只有一句"没有任何约束命中"——报告看起来正常，
+避坑清单却是空的。这是最危险的一类静默失败。
+
+所以改完约束库必须跑：
+
+```bash
+python scripts/validate_constraints.py            # 看问题
+python scripts/validate_constraints.py --strict   # CI 用，有警告也失败
+```
+
+它会检查：必填字段、`level`/`category` 取值、`verified_at` 格式与时效、id 重复、
+`impact` 是否缺失、以及**`place` 能否匹配到 `places.json` 的点位或别名**。
+
+匹配不到时有两个选择：
+1. 用 `add_places.py` 把该地点补进地名库（推荐）；
+2. 如果它本来就不该进地名库（公路、区域、全国性规则），在 `meta.place_allowlist`
+   里**显式声明**——目的是把"我故意不放进库"和"我忘了放"区分开。
+
+## 补地名库
+
+```bash
+python scripts/add_places.py --names "库尔德宁,恰西,吐尔根杏花沟" --bbox 42.5,80.5,44.5,85.5
+python scripts/add_places.py --apply cand.json     # 人工核对置信度后再落库
+```
+
+置信度规则：唯一且名字完全相等 = `high`；同名多处 = `medium`（要人挑）；
+只有"包含"匹配 = `low`（可能完全不对）。**medium 和 low 必须人工核验**，
+错误坐标会静默毁掉路线和里程（禾木曾差 25 km）。
+
+OSM 对中国西部景区的覆盖并不完整：景区常没有独立节点（可可托海就没有），
+这时改用地名/镇名，或接受低置信并标注"需现场确认"。

@@ -83,6 +83,11 @@ python scripts/fetch_constraints.py trip.json
 #    取数：远程库(ITINERARY_CONSTRAINTS_URL) → 本地缓存 → 内置快照
 #    超过时效的记录会被标成「待核实」，不要改写成确定语气
 
+# 3.5) 补库（库里没有的点位/约束，别手工硬写）
+python scripts/add_places.py --names "库尔德宁,恰西" --bbox 42.5,80.5,44.5,85.5 --json cand.json
+#    查候选 → 人工核对置信度 → --apply cand.json 落库
+python scripts/validate_constraints.py --strict            # 改完约束库一定跑，防"0 命中"静默失败
+
 # 4) 出交付物
 python scripts/render_html.py   trip.json -o 路线图.html    # 零依赖，主交付物
 python scripts/render_report.py trip.json -o 行程报告.md    # 退改决策表 + 避坑清单 + 逐日计划
@@ -111,9 +116,23 @@ python scripts/render_poster.py trip.json -o 路线图.png     # 可选，需 Pi
 - 同一事实出现互相矛盾的说法时，**写"待核实"并附两条来源**，不要二选一当作事实。
 - 时效信息一律带 `verified_at`。
 
+## 数字不要手写（用占位符，渲染时现算）
+
+trip.json 里凡是"里程/天数/点位数"，一律写占位符，渲染器会从 legs 现算——
+手填估值再回填是两次测试里反复犯的错（subtitle 写 700 km、实测 670）。
+
+    {{total_km}}         总驾驶里程      {{total_hours}}     总驾驶小时
+    {{day_km}}           当天里程        {{day_km:D3}}       指定某天
+    {{days}} / {{stops}} / {{legs}}     计数
+
+**区间车、备选路线**这类不算自驾里程的 leg，在数据里写 `"counts_toward_total": false`，
+总里程会自动排除它们（报告里会说明排除了几段）。
+渲染前每个脚本都会跑一遍 `audit()`，把"未解析的占位符 / 非真实路网里程 / 缺坐标"打出来。
+
 ## 质量红线（每条都别省）
 
 1. 里程必须来自真实路网；退化过的路段要标出来，不许当正常数据用。
+   写完 trip.json 先跑 `python scripts/validate_constraints.py` 与渲染器的 audit 提示。
 2. 时效信息标注**来源 + 核实日期**；超过 `stale_after_days` 的标「待核实」。
 3. 不确定项显式写"以现场/当日公告为准"，**不要写成确定语气**。
 4. 交付前**在浏览器里打开一次 HTML**，确认瓦片能加载、标注数量对得上、点击日程能聚焦。
@@ -122,6 +141,7 @@ python scripts/render_poster.py trip.json -o 路线图.png     # 可选，需 Pi
 ## 参考文档
 
 - `references/input-formats.md` —— **支持的输入形状与限制**（含截图/PDF 的处理办法）
+- `references/schema-conventions.md` —— 占位符、`counts_toward_total`、markdown 桥的约定
 - `references/checklist.md` —— 体检清单：时令 / 预约 / 证件 / 强度 / 停运 / 节假日六类检查项
 - `references/constraint-schema.md` —— 约束库字段定义（要新增地区时按它录数据）
 - `references/output-spec.md` —— 四件交付物的规格与验收标准

@@ -319,6 +319,13 @@ def strategy_heading(lines, start=None):
     for idx, i in enumerate(heads):
         head = _strip_md(lines[i])
         nxt = heads[idx + 1] if idx + 1 < len(heads) else len(lines)
+        # 末尾的非当日内容（`---` 分隔线、`### 出行小贴士` 之类的标题）要截断，
+        # 否则会被吞进最后一天，把"飞乌鲁木齐"这种顺带提到的地方误当成行程点位。
+        for j in range(i + 1, nxt):
+            raw_line = lines[j].strip()
+            if raw_line.startswith("---") or re.match(r'^\s*#{1,6}\s', raw_line):
+                nxt = j
+                break
         body = [_strip_md(l) for l in lines[i + 1:nxt] if _strip_md(l)]
         m = HEADING_RE.match(head)
         day_no = cn2int(m.group(1)) if (m and m.group(1)) else None
@@ -328,10 +335,12 @@ def strategy_heading(lines, start=None):
                 iso, _kind, _ = parse_date_any(b, _year_of(start))
                 if iso:
                     break
+        # 第一条 bullet 常是散文（"抵达伊宁机场，入住酒店。"），不一定像路线；
+        # 所以 route 取首行，但 note 保留**全部**内容，别把 POI 漏掉。
         route = body[0] if body else re.sub(HEADING_RE, "", head).strip(" :：·-—|")
         out.append({"date_text": head, "date_iso": iso or resolve_day_no(day_no, start),
                     "day_no": day_no, "route": route, "lodging": "",
-                    "note": " ".join(body[1:]), "source_line": i + 1, "travel": ""})
+                    "note": " ".join(body), "source_line": i + 1, "travel": ""})
     for r in out:                                                  # 从正文抓"住 X"
         ml = LODGING_INLINE.search((r["note"] or "") + " " + (r["route"] or ""))
         if ml:
